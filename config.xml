@@ -55,7 +55,7 @@
             android:smallScreens="true" />
         <application android:theme="@android:style/Theme.NoTitleBar" >
                     <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" ></activity>	
-          </application>	  
+        </application>	  
     </gap:config-file>
 
     <content src="index.html" />
