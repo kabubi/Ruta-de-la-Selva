@@ -43,11 +43,5 @@
 
     <content src="index.html" />
     <access origin="*" />
-
-    <gap:config-file platform="android" parent="/manifest">	
-          <application android:theme="@android:style/Theme.NoTitleBar" >
-                    <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" ></activity>	
-          </application>	  
-    </gap:config-file>
     
 </widget>
