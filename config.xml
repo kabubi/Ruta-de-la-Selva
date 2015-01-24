@@ -48,7 +48,9 @@
     
     <gap:plugin name="nl.x-services.plugins.socialsharing" />
     
-    <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" ></activity>
+    <gap:config-file platform="android" parent="/manifest">
+                    <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" ></activity>
+    </gap:config-file>
 
     <content src="index.html" />
     <access origin="*" />
