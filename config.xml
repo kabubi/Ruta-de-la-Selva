@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.cm.rutadelaselva" version="1.8.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.cm.rutadelaselva" 
+    version="1.8.1" 
+    xmlns="http://www.w3.org/ns/widgets" 
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:gap="http://phonegap.com/ns/1.0">
+
     <name>Ruta de la Selva</name>
 
     <description>
@@ -9,6 +14,8 @@
     <feature name="SocialSharing">
         <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
     </feature>
+    
+    <preference name="fullscreen" value="false" />
     
     <icon src="icon.png" />
     <icon src="res/icon/android/drawable-ldpi/appicon.png"   gap:platform="android"    gap:density="ldpi" />
@@ -40,6 +47,12 @@
     <gap:splash src="res/screen/ios/Default-Landscape.png"     gap:platform="ios"     width="1024" height="768" />
     
     <gap:plugin name="nl.x-services.plugins.socialsharing" />
+    
+    <gap:config-file platform="android" parent="/manifest">	
+          <application android:theme="@android:style/Theme.NoTitleBar" >
+                    <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" ></activity>	
+          </application>	  
+    </gap:config-file>
 
     <content src="index.html" />
     <access origin="*" />
