@@ -1,0 +1,129 @@
+{
+	"mapwidth":"2200",
+	"mapheight":"2500",
+	"categories":[
+
+	],
+	"levels":[
+		{
+			"id":"mapa",
+			"map":"mapa.jpg",
+			"minimap":"mapa-chico.jpg",
+			"locations":[
+				{
+					"id":"cu",
+					"title":"Cuña Piru Lodge",
+					"action": "tooltip",
+					"description": "<img src=\"img/cunapiru.png\" alt=\"Cuna Piru\">",
+					"thumbnail": "",
+					"pin": "purple",
+					"x":"0.4604",
+					"y":"0.6032"
+				}	,
+				{
+					"id":"ta",
+					"title":"Tacuapí Lodge",
+					"action": "tooltip",
+					"description": "<img src=\"img/tacuapi.png\" alt=\"Tacuapi\">",
+					"thumbnail": "",
+					"pin": "purple",
+					"x":"0.4750",
+					"y":"0.6160"
+				}	,
+				{
+					"id":"re",
+					"title":"Refugio Moconá",
+					"action": "tooltip",
+					"description": "<img src=\"img/refugiomocona.png\" alt=\"Refugio Mocona\">",
+					"thumbnail": "",
+					"pin": "purple",
+					"x":"0.8077",
+					"y":"0.6169"
+				}	,
+				{
+					"id":"yu",
+					"title":"Yucuma Lodge",
+					"action": "tooltip",
+					"description": "<img src=\"img/yucuma.png\" alt=\"Yucuma Lodge\">",
+					"thumbnail": "",
+					"pin": "purple",
+					"x":"0.7722",
+					"y":"0.6564"
+				}   ,
+				{
+					"id":"ya",
+					"title":"Yacutinga Lodge",
+					"action": "tooltip",
+					"description": "<img src=\"img/yacutinga.png\" alt=\"Yacutinga Lodge\">",
+					"thumbnail": "",
+					"pin": "purple",
+					"x":"0.7740",
+					"y":"0.0952"
+				}	,
+				{
+					"id":"yt",
+					"title":"Ytororo Lodge",
+					"action": "tooltip",
+					"description": "<img src=\"img/ytororo.png\" alt=\"Ytororo Lodge\">",
+					"thumbnail": "",
+					"pin": "purple",
+					"x":"0.5686",
+					"y":"0.5656"
+				}	,
+				{
+					"id":"pb",
+					"title":"Puerto Bemberg",
+					"action": "tooltip",
+					"description": "<img src=\"img/puertobemberg.png\" alt=\"Puerto Bemberg\">",
+					"thumbnail": "",
+					"pin": "purple",
+					"x":"0.5909",
+					"y":"0.1880"
+				}  ,
+				{
+					"id":"sh",
+					"title":"Sheraton Iguazu",
+					"action": "tooltip",
+					"description": "<img src=\"img/sheraton.png\" alt=\"Sheraton Iguazu\">",
+					"thumbnail": "",
+					"pin": "purple",
+					"x":"0.6513",
+					"y":"0.1116"
+				}  ,
+				{
+					"id":"am",
+					"title":"Hotel Amerian",
+					"action": "tooltip",
+					"description": "<img src=\"img/amerian.png\" alt=\"Hotel Amerian\">",
+					"thumbnail": "",
+					"pin": "purple",
+					"x":"0.6036",
+					"y":"0.0920"
+				} ,
+				{
+					"id":"ij",
+					"title":"Iguazu Jungle",
+					"action": "tooltip",
+					"description": "<img src=\"img/iguazujungle.png\" alt=\"Iguazu Jungle\">",
+					"thumbnail": "",
+					"pin": "purple",
+					"x":"0.6268",
+					"y":"0.0908"
+				}  ,
+				{
+					"id":"as",
+					"title":"Aldea de la Selva",
+					"action": "tooltip",
+					"description": "<img src=\"img/aldeaselva.png\" alt=\"Aldea de la Selva\">",
+					"thumbnail": "",
+					"pin": "purple",
+					"x":"0.6368",
+					"y":"0.0988"
+				}
+			]
+		}
+	],
+	"minimap":"true",
+	"sidebar":"true",
+	"zoomlimit":"4"
+}
