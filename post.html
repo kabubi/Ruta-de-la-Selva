@@ -8,15 +8,16 @@
 		<ons-button class="ion-android-share" style="font-size:20px;" modifier="large--cta" ng-click="openSocialSharing()"></ons-button>
 	  </span>
     </div>
-    <div class="center">{{ item.title | limitTo: 12 }}</div>
+    <div class="center">{{ item.title | limitTo: 20 }}</div>
   </ons-toolbar>
   <div class="app-page">
     <div class="app-hero app-hero-image">
-      <h2>{{ item.title | limitTo: 15 }}</h2>
+	  <i class="ion-pricetags"></i> <span ng-repeat="cat in item.categories">{{cat.title}} </span>
+      <h2>{{ item.title | limitTo: 25 }}</h2>
       <div class="app-hero-overlay"></div>
       <img ng-src="{{ item.thumbnail_images.full.url }}" class="app-hero-bg">
     </div>
-    <div class="app-page-content">
+    <div class="app-page-content">	  
       <div ng-bind-html="renderHtml(item.content)"></div>
     </div>
   </div>

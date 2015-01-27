@@ -392,11 +392,10 @@ h6 {
   height: 44px;
   padding-left: 0;
   padding-right: 0;
-  background: rgba(37, 36, 34, 0.8);
+  background: #343331;
   color: #f4a332;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
-  border-bottom: 1px solid #343331;
   font-weight: 400;
   width: 100%;
   white-space: nowrap;
@@ -2545,7 +2544,6 @@ h6 {
   padding: 0 10px 0 10px;
   margin: 0 0 0 0;
   border-top: none;
-  border-bottom: 1px solid #343331;
   color: #f4a332;
   background-color: transparent;
   min-height: 44px;
@@ -2567,9 +2565,9 @@ h6 {
 }
 .list__item:first-child {
   border-top: none;
-  border-bottom: 1px solid #343331;
 }
 .list__item:last-child {
+border-top: none;
   border-bottom: none;
 }
 .list__item:first-child:last-child {
@@ -3977,4 +3975,22 @@ input[type="search"].search-input::-webkit-search-cancel-button {
 ons-button.ion-android-share.ng-isolate-scope.button.effeckt-button.button--large--cta.slide-left {
 display: inherit;
 color: #f4a332;
+}
+
+span.ng-scope.ng-binding {
+color: #f4a332;
+position: absolute;
+left: 35px;
+bottom: 50px;
+margin: 0;
+z-index: 3;
+}
+
+i.ion-pricetags {
+color: #f4a332;
+position: absolute;
+left: 15px;
+bottom: 50px;
+margin: 0;
+z-index: 3;
 }
