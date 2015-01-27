@@ -21,10 +21,9 @@
 			</ons-row>
             <ons-row>
 			  <div class="name">
-				{{ item.title | limitTo: 25 }}...
+				{{ item.title | limitTo: 25 }}
 			  </div>
 			  <div class="location" ng-show="{{ item.categories }}">
-		      <i class="ion-pricetags"></i> <span ng-repeat="cat in item.categories">{{cat.title}} </span>
 			  </div>
 			</ons-row>			
         </ons-list-item>		
