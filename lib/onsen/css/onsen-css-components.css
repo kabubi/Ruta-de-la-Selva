@@ -1056,6 +1056,7 @@ h6 {
   display: block;
   width: 100%;
   text-align: center;
+  border: none;
 }
 .button--large:active {
   background-color: #514d45;
@@ -2562,7 +2563,7 @@ h6 {
   transition: none;
 }
 .list__item:first-child {
-  border-top: none;
+  border: none;
 }
 .list__item:last-child {
 border-top: none;
