@@ -701,7 +701,6 @@ h6 {
   box-shadow: none;
   font-weight: 400;
   border-bottom: none;
-  border-top: 1px solid #343331;
   position: absolute;
   bottom: 0px;
   right: 0px;
@@ -801,7 +800,6 @@ h6 {
   color: #fff;
   vertical-align: middle;
   background-color: #514d45;
-  border: 0px solid currentColor;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   -webkit-transition: none;
