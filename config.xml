@@ -15,7 +15,7 @@
         <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
     </feature>
     
-    <preference name="fullscreen" value="true" />
+    <!--<preference name="fullscreen" value="true" />-->
     
     <icon src="icon.png" />
     <icon src="res/icon/android/drawable-ldpi/appicon.png"   gap:platform="android"    gap:density="ldpi" />
@@ -49,14 +49,15 @@
     <gap:plugin name="nl.x-services.plugins.socialsharing" />
     
     <gap:config-file platform="android" parent="/manifest">
-		<supports-screens 
-              android:xlargeScreens="false" 
-              android:largeScreens="false" 
-              android:smallScreens="false" />
+        <supports-screens 
+            android:xlargeScreens="true" 
+            android:largeScreens="true" 
+            android:smallScreens="true" />
         <application android:theme="@android:style/Theme.NoTitleBar" >
-            <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" ></activity>
+            <activity android:theme="@android:style/Theme.NoTitleBar" >
+            </activity>
         </application>
-	</gap:config-file>
+    </gap:config-file>
 
     <content src="index.html" />
     <access origin="*" />
