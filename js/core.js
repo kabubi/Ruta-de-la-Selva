@@ -1,5 +1,13 @@
 var app = angular.module('app', ['onsen', 'ngAudio', 'ngMap']);
 
+// Mostrar/Ocultar buscador
+app.controller('buscar',['$scope', function($scope){
+        $scope.custom = false;
+        $scope.toggleCustom = function() {
+            $scope.custom = $scope.custom === false ? true: false;
+        };
+}]);
+
 // Alojamientos Controller
 
 app.filter('htmlToPlaintext', function() {
@@ -114,26 +122,86 @@ app.controller('markersController', function($scope, $compile){
 	
 	$scope.infoWindow = {
 		title: 'title',
+		image: 'image',
 		content: 'content'
 	};
 
 	$scope.markers = [
 		{
-			'title' : 'Location #1',
+			'title' : 'YUCUMA Logde',
 			'content' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a viverra magna',
+			'image': 'img/yucuma.png',
 			'location'	: [-27.251, -54.049],
 			'icon' : 'img/pin.png'
 		}, 
 		{
-			'title' : 'Location #2',
+			'title' : 'SHERATON Hotel',
 			'content' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a viverra magna',
-			'location'	: [40.7243, -74.2014],
+			'image': 'img/sheraton.png',
+			'location'	: [-25.6799, -54.445],
 			'icon' : 'img/pin.png'
 		}, 
 		{
-			'title' : 'Location #3',
+			'title' : 'AMERIAN Hotel',
 			'content' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a viverra magna',
-			'location'	: [40.7312, -74.1923],
+			'image': 'img/amerian.png',
+			'location'	: [-25.595, -54.589],
+			'icon' : 'img/pin.png'
+		},
+		{
+			'title' : 'Posada PUERTO BEMBERG',
+			'content' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a viverra magna',
+			'image': 'img/puertobemberg.png',
+			'location'	: [-25.915, -54.615],
+			'icon' : 'img/pin.png'
+		},
+		{
+			'title' : 'IGUAZU JUNGLE Lodge',
+			'content' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a viverra magna',
+			'image': 'img/iguazujungle.png',
+			'location'	: [-25.594, -54.565],
+			'icon' : 'img/pin.png'
+		},
+		{
+			'title' : 'LA ALDEA DE LA SELVA Lodge',
+			'content' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a viverra magna',
+			'image': 'img/aldeaselva.png',
+			'location'	: [-25.606, -54.551],
+			'icon' : 'img/pin.png'
+		},
+		{
+			'title' : 'YTORORO Lodge',
+			'content' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a viverra magna',
+			'image': 'img/ytororo.png',
+			'location'	: [-26.999, -54.628],
+			'icon' : 'img/pin.png'
+		},
+		{
+			'title' : 'TACUAPI Lodge',
+			'content' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a viverra magna',
+			'image': 'img/tacuapi.png',
+			'location'	: [-27.055, -54.842],
+			'icon' : 'img/pin.png'
+		},
+		{
+			'title' : 'CUÑA PIRU Lodge',
+			'content' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a viverra magna',
+			'image': 'img/cunapiru.png',
+			'location'	: [-27.133, -54.900],
+			'icon' : 'img/pin.png'
+		},
+		{
+			'title' : 'MOCONA REFUGIO Lodge',
+			'content' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a viverra magna',
+			'image': 'img/refugiomocona.png',
+			'location'	: [-27.141, -53.926],
+			'icon' : 'img/pin.png'
+		},
+		{
+			'title' : 'YACUTINGA Lodge',
+			'content' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a viverra magna',
+			'image': 'img/yacutinga.png',
+			'location'	: [-25.577, -54.074],
 			'icon' : 'img/pin.png'
 		}
     ];

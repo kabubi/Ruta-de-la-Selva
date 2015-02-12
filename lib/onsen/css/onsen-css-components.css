@@ -392,10 +392,10 @@ h6 {
   height: 44px;
   padding-left: 0;
   padding-right: 0;
-  background: #343331;
+  background: #252422;
   color: #f4a332;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
+  -webkit-box-shadow: 0px 2px 7px #000;
+  box-shadow: 0px 2px 7px #000;
   font-weight: 400;
   width: 100%;
   white-space: nowrap;
@@ -444,6 +444,20 @@ h6 {
   display: block;
   vertical-align: middle;
   float: left;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.navigation-bar__center {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  background: #343331;
+  width: 46%;
+  text-align: center;
+  line-height: 44px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #f4a332;
 }
 .navigation-bar__left {
   max-width: 50%;
@@ -455,15 +469,13 @@ h6 {
   width: 27%;
   text-align: right;
 }
-.navigation-bar__center {
-  width: 46%;
-  text-align: center;
-  line-height: 44px;
-  font-size: 17px;
-  font-weight: 500;
-  color: #f4a332;
+
+.center.navigation-bar__title.navigation-bar__center {
+background: transparent;
 }
+
 .navigation-bar__title {
+  background: #252422;
   line-height: 44px;
   font-size: 17px;
   font-weight: 700;
@@ -654,6 +666,7 @@ h6 {
   background-color: transparent;
   background-image: none;
   border: none;
+  box-shadow: none;
 }
 /* topdoc
   name: Bottom Bar
@@ -1129,7 +1142,6 @@ h6 {
   color: #fff;
   vertical-align: middle;
   background-color: #514d45;
-  border: 0px solid currentColor;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   -webkit-transition: none;
@@ -1143,7 +1155,6 @@ h6 {
   display: block;
   width: 100%;
   background: transparent;
-  border: 1px solid transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
   color: #514d45;
@@ -1157,9 +1168,9 @@ h6 {
   opacity: 0.2;
   color: #514d45;
   background: transparent;
-  border: 1px solid transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
+  opacity: 0.2;
 }
 .button--large--quiet:disabled,
 .button--large--quiet[disabled] {
@@ -1220,7 +1231,6 @@ h6 {
   color: #fff;
   vertical-align: middle;
   background-color: #514d45;
-  border: 0px solid currentColor;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   -webkit-transition: none;
@@ -2924,10 +2934,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   box-sizing: border-box;
   height: 31px;
   font-size: 15px;
-  border: 1px solid #343331;
-  background-color: #504c44;
   -webkit-box-shadow: none;
-  box-shadow: none;
   color: #f4a332;
   padding: 4px 0 0 28px;
   -webkit-border-radius: 4px;
@@ -2942,9 +2949,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   width: 100%;
 }
 .search-input:focus {
-  background-color: #504c44;
   color: #f4a332;
-  border: 1px solid #343331;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -2999,7 +3004,6 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   border: 1px solid #343331;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  background-color: #504c44;
   -webkit-box-shadow: none;
   box-shadow: none;
   color: #f4a332;
@@ -3974,7 +3978,28 @@ input[type="search"].search-input::-webkit-search-cancel-button {
 ons-button.ion-android-share.ng-isolate-scope.button.effeckt-button.button--large--cta.slide-left {
 display: inherit;
 color: #f4a332;
+font-size: 20px;
 }
+
+}
+ons-button.ion-android-share.ng-isolate-scope.button.effeckt-button.button--large--cta.slide-left:active {
+display: inherit;
+color: #f4a332;
+opacity: 0.2;
+}
+
+ons-button.ion-android-search.ng-isolate-scope.button.effeckt-button.button--large--cta.slide-left {
+display: inherit;
+color: #f4a332;
+font-size: 20px;
+}
+
+ons-button.ion-android-search.ng-isolate-scope.button.effeckt-button.button--large--cta.slide-left:active{
+display: inherit;
+color: #f4a332;
+opacity: 0.2;
+}
+
 
 span.ng-scope.ng-binding {
 color: #f4a332;
@@ -3992,4 +4017,22 @@ left: 15px;
 bottom: 50px;
 margin: 0;
 z-index: 3;
+}
+
+.searchbar {
+-webkit-box-shadow: none !important;
+box-shadow: none !important;
+background: #343331;
+width: 100%;
+text-align: center;
+line-height: 44px;
+font-size: 17px;
+font-weight: 500;
+color: #f4a332;
+padding: 1px;
+}
+
+input.search-input.ng-pristine.ng-valid {
+width: 96%;
+margin: 6px auto 6px auto;
 }

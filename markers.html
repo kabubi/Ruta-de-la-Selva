@@ -10,9 +10,12 @@
       
       <info-window id="marker-info">
         <div ng-non-bindable="">
-          <strong class="markerTitle">{{ infoWindow.title }}</strong>
+          <!-- <strong class="markerTitle">{{ infoWindow.title }}</strong> -->
           <div class="markerContent">
-            <p>{{ infoWindow.content }}</p>
+			<center>
+			  <img src="{{ marker.image }}"/>
+			</center>
+            <!-- <p>{{ infoWindow.content }}</p> -->
           </div>
         </div>
       </info-window>

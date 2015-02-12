@@ -6,16 +6,14 @@
       </div>
       <div class="center">Áreas Naturales</div>
     </ons-toolbar>
-	<div class="navigation-bar">
-      <div class="navigation-bar__center">
-        <input type="search" class="search-input" style="width: 96%; margin: 6px auto 6px auto;" ng-model="search" placeholder="Buscar">
-      </div>
+    <div class="searchbar">
+        <input type="search" class="search-input" ng-model="search" placeholder="Buscar">
     </div>
     <div class="app-page informes-page" ng-controller="areasController" data-ng-init="getAllRecords()">
       <ons-list modifier="news">
         <ons-list-item modifier="chevron" class="list-item-container" ng-repeat="item in items | filter:search" ng-click="showPost(item)">
 			<ons-row>
-			  <div class="app-hero app-hero-image">
+			  <div class="place">
 			    <img ng-show="{{ item.thumbnail_images }}" ng-src="{{ item.thumbnail_images.full.url }}" class="thumbnail">
               </div>
 			</ons-row>
