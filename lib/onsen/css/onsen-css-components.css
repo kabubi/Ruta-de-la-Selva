@@ -394,8 +394,9 @@ h6 {
   padding-right: 0;
   background: #252422;
   color: #f4a332;
-  -webkit-box-shadow: 0px 2px 7px #000;
-  box-shadow: 0px 2px 7px #000;
+  -webkit-box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
   font-weight: 400;
   width: 100%;
   white-space: nowrap;
@@ -4033,6 +4034,11 @@ padding: 1px;
 }
 
 input.search-input.ng-pristine.ng-valid {
+width: 96%;
+margin: 6px auto 6px auto;
+}
+
+input.search-input.ng-valid.ng-dirty {
 width: 96%;
 margin: 6px auto 6px auto;
 }

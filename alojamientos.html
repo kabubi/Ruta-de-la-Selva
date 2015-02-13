@@ -1,36 +1,39 @@
 <ons-navigator animation="slide" var="news"> 
-  <ons-page>
-    <ons-toolbar modifier="opacity">	
+  <ons-page ng-controller="alojamientosController" data-ng-init="getAllRecords()">
+    <ons-toolbar>	
       <div class="left">
 	      <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon></ons-toolbar-button>
       </div>
 	  	<div class="right">
-	      <span class="toolbar-button--quiet navigation-bar__line-height">
-		      <ons-button class="ion-android-search" modifier="large--cta"></ons-button>		
+	      <span class="toolbar-button--quiet navigation-bar__line-height">    
+          <!-- Este tendria que ser el boton que funcione -->      
+		      <ons-button href="#" class="ion-android-search" modifier="large--cta" ng-model="collapsed" ng-click="collapsed=!collapsed"></ons-button>		
 	      </span>
       </div>
       <div class="center">Alojamientos</div>
     </ons-toolbar>
-    <div class="searchbar">
-        <input  type="search" class="search-input" ng-model="search" placeholder="Buscar">
+    <!-- Este es el boton que funciona 
+    <a href="#" ng-model="collapsed" ng-click="collapsed=!collapsed">Mostrar/Ocultar</a> -->
+    <div class="searchbar">        
+      <input ng-show="collapsed" type="search" class="search-input" ng-model="search" placeholder="Buscar">
     </div>
-    <div class="app-page alojamientos-page" ng-controller="alojamientosController" data-ng-init="getAllRecords()">
+    <div class="app-page alojamientos-page">
       <ons-list modifier="news">
         <ons-list-item modifier="chevron" class="list-item-container" ng-repeat="item in items | filter:search" ng-click="showPost(item)">
-			<ons-row>
-			  <div class="place">
-			    <img ng-show="{{ item.thumbnail_images }}" ng-src="{{ item.thumbnail_images.full.url }}" class="thumbnail">
-              </div>
-			</ons-row>
-            <ons-row>
-			  <div class="cabecera">
-			    <div class="name">
-				  {{ item.title | limitTo: 25 }}
-			    </div>
-				<div class="location" ng-show="{{ item.categories }}">
-			    </div>
-			  </div>
-			</ons-row>			
+		      <ons-row>
+		        <div class="place">
+			         <img ng-show="{{ item.thumbnail_images }}" ng-src="{{ item.thumbnail_images.full.url }}" class="thumbnail">
+            </div>
+		      </ons-row>
+          <ons-row>
+		  	    <div class="cabecera">
+			        <div class="name">
+				        {{ item.title | limitTo: 25 }}
+			        </div>
+				      <div class="location" ng-show="{{ item.categories }}">
+			        </div>
+			      </div>
+			    </ons-row>			
         </ons-list-item>		
       </ons-list>
       <ons-button id="moreButton" modifier="large" should-spin="{{isFetching}}" ng-click="nextPage()">more news</ons-button>

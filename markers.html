@@ -21,9 +21,10 @@
       </info-window>
 
       <marker ng-repeat="(id, marker) in markers" id="{{ id }}" 
-		position="{{marker.location}}" 
-		on-click="showMarker(event, $index)"
-		icon="{{marker.icon}}" >
+    		position="{{marker.location}}" 
+    		on-click="showMarker(event, $index)"
+    		icon="{url:'img/pins.png',
+			scaledSize:[35,35]}">
 	  </marker>
 
     </map>
