@@ -1,32 +1,35 @@
-<ons-navigator animation="slide" var="news">  
-  <ons-page>
-    <ons-toolbar modifier="opacity">
-      <div class="left">
+<ons-page ng-controller="areasController" data-ng-init="getAllRecords()">
+  <ons-toolbar modifier="opacity">
+    <div class="left">
 	    <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon></ons-toolbar-button>
-      </div>
-      <div class="center">Áreas Naturales</div>
-    </ons-toolbar>
-    <div class="searchbar">
-        <input type="search" class="search-input" ng-model="search" placeholder="Buscar">
     </div>
-    <div class="app-page informes-page" ng-controller="areasController" data-ng-init="getAllRecords()">
-      <ons-list modifier="news">
-        <ons-list-item modifier="chevron" class="list-item-container" ng-repeat="item in items | filter:search" ng-click="showPost(item)">
-			<ons-row>
-			  <div class="place">
-			    <img ng-show="{{ item.thumbnail_images }}" ng-src="{{ item.thumbnail_images.full.url }}" class="thumbnail">
-              </div>
-			</ons-row>
-            <ons-row>
-			  <div class="name">
-				{{ item.title | limitTo: 50 }}
-			  </div>
-			  <div class="location" ng-show="{{ item.categories }}">
-		      <!-- <i class="ion-pricetags"></i> <span ng-repeat="cat in item.categories">{{cat.title}} </span> -->
-			  </div>
-			</ons-row>			
-        </ons-list-item>
-      <ons-button id="moreButton" modifier="large" should-spin="{{isFetching}}" ng-click="nextPage()">more news</ons-button>
+    <div class="right">
+      <ons-toolbar-button ng-click="collapse()" ><ons-icon icon="ion-android-search"></ons-icon></ons-toolbar-button>
     </div>
-  </ons-page>
-</ons-navigator>   
+    <div class="center">Áreas Naturales</div>
+  </ons-toolbar>
+  <div class="searchbar">
+    <input ng-show="collapsed" type="search" class="search-input" ng-model="search" placeholder="Buscar">
+  </div>
+  <div class="app-page informes-page">
+    <ons-list modifier="news">
+      <ons-list-item modifier="chevron" class="list-item-container" ng-repeat="item in items | filter:search" ng-click="showPost(item)">
+			  <ons-row>
+			    <div class="place">
+			      <img ng-show="{{ item.thumbnail_images }}" ng-src="{{ item.thumbnail_images.full.url }}" class="thumbnail" img-cache>
+          </div>
+			  </ons-row>
+        <ons-row>
+			    <div class="cabecera">
+            <div class="name">
+              {{ item.title | limitTo: 25 }}
+            </div>
+            <div class="location" ng-show="{{ item.categories }}">
+            </div>
+          </div>
+        </ons-row>      
+      </ons-list-item>    
+    </ons-list>
+    <ons-button id="moreButton" modifier="large" should-spin="{{isFetching}}" ng-click="nextPage()">more news</ons-button>
+  </div>
+</ons-page>

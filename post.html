@@ -4,9 +4,7 @@
       <ons-back-button>Atras</ons-back-button>
     </div>
 	<div class="right">
-	  <span class="toolbar-button--quiet navigation-bar__line-height">
-		<ons-button class="ion-android-share" modifier="large--cta" ng-click="openSocialSharing()"></ons-button>
-	  </span>
+	  <ons-toolbar-button ng-click="openSocialSharing()" ><ons-icon icon="ion-android-share"></ons-icon></ons-toolbar-button>
     </div>
     <div class="center">{{ item.title | limitTo: 20 }}</div>
   </ons-toolbar>
@@ -15,7 +13,7 @@
 	  <i class="ion-pricetags"></i> <span ng-repeat="cat in item.categories">{{cat.title}} </span>
       <h2>{{ item.title | limitTo: 25 }}</h2>
       <div class="app-hero-overlay"></div>
-      <img ng-src="{{ item.thumbnail_images.full.url }}" class="app-hero-bg">
+      <img ng-src="{{ item.thumbnail_images.full.url }}" class="app-hero-bg" img-cache>
     </div>
     <div class="app-page-content">	  
       <div ng-bind-html="renderHtml(item.content)"></div>
