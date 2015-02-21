@@ -2958,11 +2958,13 @@ input[type="search"].search-input::-webkit-search-cancel-button {
 .search-input::-webkit-search-cancel-button,
 .search-input::-webkit-search-decoration {
   margin-right: 0px;
+  margin: 6px auto 6px auto;
 }
 .search-input::-webkit-input-placeholder,
 .search-input::-moz-placeholder,
 .search-input::-ms-input-placeholder {
   color: #f4a332;
+  margin: 6px auto 6px auto;
 }
 .search-input:disabled {
   opacity: 0.3;

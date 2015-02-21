@@ -7,8 +7,10 @@
 
 /* Insert here your custom CSS */
 
-.list {
-	border: none !important;
+a {
+	text-decoration: none;
+	color: #ff9900;
+	transition: color 0.2s;
 }
 .app-page .list--news .thumbnail-box {
 	border-radius: 0px;
@@ -40,14 +42,13 @@ ons-toolbar ~ .page__content {
 	margin-right: 10px;
 }
 .list__item:first-child {
-	border-top: none;
-	border-bottom: none;
+	border: none !important;
 }
 .list__item {
-	border-top: none;
-	border-bottom: none;
+	border: none !important;
 	color: #fff;
 }
+
 .app-page .list--news .list-item-container {
 	line-height: 1;
 	padding: 0px 0px 0px 0px;
@@ -126,4 +127,36 @@ ons-list.menu-list.list.ons-list-inner {
 .button {
 	background-color: transparent;
 }
-
+input.search-input.ng-pristine.ng-valid {
+	width: 96%;
+	margin: 6px auto 6px auto;
+}
+.searchbar {
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	background: #343331;
+	width: 100%;
+	text-align: center;
+	line-height: 44px;
+	font-size: 17px;
+	font-weight: 500;
+	color: #f4a332;
+	padding: 1px;
+}
+.search-input {
+	border: none;
+	background-color: transparent;
+	color: #f4a332;
+}
+.search-input:focus {
+	  background-color: transparent;
+	  border: none;
+}
+input.search-input {
+	width: 96%;
+	margin: 6px auto 6px auto;
+	color: #f4a332 !important;
+}
+.list__item--chevron:before {
+	color: transparent;
+}
