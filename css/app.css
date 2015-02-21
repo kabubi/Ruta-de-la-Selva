@@ -42,7 +42,8 @@ ons-toolbar ~ .page__content {
 	margin-right: 10px;
 }
 .list__item:first-child {
-	border: none !important;
+	border-top: none;
+	border-bottom: none !important;
 }
 .list__item {
 	border: none !important;
