@@ -15,7 +15,7 @@
       <ons-list modifier="news">
         <ons-list-item modifier="chevron" class="list-item-container" ng-repeat="item in items | filter:search" ng-click="showPost(item)">
 		  <ons-row>
-			<div class="place">
+			<div class="thumbnail-box is-loading" images-loaded="imgLoadedEvents">
 			  <img ng-show="{{ item.thumbnail_images }}" ng-src="{{ item.thumbnail_images.full.url }}" class="thumbnail" img-cache>
             </div>
 		  </ons-row>

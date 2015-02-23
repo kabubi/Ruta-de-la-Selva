@@ -140,6 +140,17 @@ app.controller('atractivosController', [ '$http', '$scope', '$rootScope', functi
 	$scope.currentPage = 1;
 	$scope.pageNumber = 1;
 	$scope.isFetching = true;
+	$scope.collapsed = false;
+
+	$scope.collapse = function(){
+		return $scope.collapsed=!$scope.collapsed;
+	}
+	
+	$scope.imgLoadedEvents = {
+        done: function(instance) {
+            angular.element(instance.elements[0]).removeClass('is-loading').addClass('is-loaded');
+        }
+    };
 
 	$scope.getAllRecords = function(pageNumber){
 
@@ -152,6 +163,141 @@ app.controller('atractivosController', [ '$http', '$scope', '$rootScope', functi
 			$scope.isFetching = false;
 			if($scope.currentPage==$scope.totalPages){
 				$('.alojamientos-page #moreButton').fadeOut('fast');	
+			}
+    	});
+	 
+	};
+
+	$scope.showPost = function(item){
+			
+		$rootScope.postContent = item;
+	    $scope.ons.navigator.pushPage('post.html');
+
+	};
+
+	$scope.nextPage = function(){
+		
+		$scope.pageNumber = ($scope.currentPage + 1);
+		if($scope.pageNumber <= $scope.totalPages){
+			$scope.getAllRecords($scope.pageNumber);
+			$scope.currentPage++;
+		}
+
+	}
+
+
+}]);
+
+// Informes Controller
+
+app.filter('htmlToPlaintext', function() {
+    return function(text) {
+      return String(text).replace(/<[^>]+>/gm, '');
+    }
+  }
+);
+
+app.controller('informesController', [ '$http', '$scope', '$rootScope', function($http, $scope, $rootScope){
+
+	$scope.yourAPI = 'http://recorramisiones.com.ar/rutadelaselva/api';
+	$scope.items = [];
+	$scope.totalPages = 0;
+	$scope.currentPage = 1;
+	$scope.pageNumber = 1;
+	$scope.isFetching = true;
+	$scope.collapsed = false;
+
+	$scope.collapse = function(){
+		return $scope.collapsed=!$scope.collapsed;
+	}
+	
+	$scope.imgLoadedEvents = {
+        done: function(instance) {
+            angular.element(instance.elements[0]).removeClass('is-loading').addClass('is-loaded');
+        }
+    };
+
+	$scope.getAllRecords = function(pageNumber){
+
+		$scope.isFetching = true;
+
+        $http.jsonp($scope.yourAPI+'/?json=get_category_posts&slug=informes-turisticos&status=publish'+$scope.pageNumber+'&callback=JSON_CALLBACK').success(function(response) {
+
+			$scope.items = $scope.items.concat(response.posts);
+			$scope.totalPages = response.pages;
+			$scope.isFetching = false;
+			if($scope.currentPage==$scope.totalPages){
+				$('.informes-page #moreButton').fadeOut('fast');	
+			}
+    	});
+	 
+	};
+
+	$scope.showPost = function(item){
+			
+		$rootScope.postContent = item;
+	    $scope.ons.navigator.pushPage('post.html');
+
+	};
+
+	$scope.nextPage = function(){
+		
+		$scope.pageNumber = ($scope.currentPage + 1);
+		if($scope.pageNumber <= $scope.totalPages){
+			$scope.getAllRecords($scope.pageNumber);
+			$scope.currentPage++;
+		}
+
+	}
+
+
+}]);
+
+// Areas naturales Controller
+
+app.filter('htmlToPlaintext', function() {
+    return function(text) {
+      return String(text).replace(/<[^>]+>/gm, '');
+    }
+  }
+);
+
+app.controller('areasController', [ '$http', '$scope', '$rootScope', function($http, $scope, $rootScope){
+
+	$scope.yourAPI = 'http://recorramisiones.com.ar/rutadelaselva/api';
+	$scope.items = [];
+	$scope.totalPages = 0;
+	$scope.currentPage = 1;
+	$scope.pageNumber = 1;
+	$scope.isFetching = true;
+	$scope.collapsed = false;
+	$scope.collapsed = false;
+
+	$scope.collapse = function(){
+		return $scope.collapsed=!$scope.collapsed;
+	}
+	
+	$scope.imgLoadedEvents = {
+        done: function(instance) {
+            angular.element(instance.elements[0]).removeClass('is-loading').addClass('is-loaded');
+        }
+    };
+
+	$scope.collapse = function(){
+		return $scope.collapsed=!$scope.collapsed;
+	}
+
+	$scope.getAllRecords = function(pageNumber){
+
+		$scope.isFetching = true;
+
+        $http.jsonp($scope.yourAPI+'/?json=get_category_posts&slug=areas-naturales-protegidas&status=publish'+$scope.pageNumber+'&callback=JSON_CALLBACK').success(function(response) {
+
+			$scope.items = $scope.items.concat(response.posts);
+			$scope.totalPages = response.pages;
+			$scope.isFetching = false;
+			if($scope.currentPage==$scope.totalPages){
+				$('.informes-page #moreButton').fadeOut('fast');	
 			}
     	});
 	 
@@ -268,119 +414,6 @@ app.controller('markersController', function($scope, $compile){
     }
 
 });
-
-// Informes Controller
-
-app.filter('htmlToPlaintext', function() {
-    return function(text) {
-      return String(text).replace(/<[^>]+>/gm, '');
-    }
-  }
-);
-
-app.controller('informesController', [ '$http', '$scope', '$rootScope', function($http, $scope, $rootScope){
-
-	$scope.yourAPI = 'http://recorramisiones.com.ar/rutadelaselva/api';
-	$scope.items = [];
-	$scope.totalPages = 0;
-	$scope.currentPage = 1;
-	$scope.pageNumber = 1;
-	$scope.isFetching = true;
-
-	$scope.getAllRecords = function(pageNumber){
-
-		$scope.isFetching = true;
-
-        $http.jsonp($scope.yourAPI+'/?json=get_category_posts&slug=informes-turisticos&status=publish'+$scope.pageNumber+'&callback=JSON_CALLBACK').success(function(response) {
-
-			$scope.items = $scope.items.concat(response.posts);
-			$scope.totalPages = response.pages;
-			$scope.isFetching = false;
-			if($scope.currentPage==$scope.totalPages){
-				$('.informes-page #moreButton').fadeOut('fast');	
-			}
-    	});
-	 
-	};
-
-	$scope.showPost = function(item){
-			
-		$rootScope.postContent = item;
-	    $scope.ons.navigator.pushPage('post.html');
-
-	};
-
-	$scope.nextPage = function(){
-		
-		$scope.pageNumber = ($scope.currentPage + 1);
-		if($scope.pageNumber <= $scope.totalPages){
-			$scope.getAllRecords($scope.pageNumber);
-			$scope.currentPage++;
-		}
-
-	}
-
-
-}]);
-
-// Areas naturales Controller
-
-app.filter('htmlToPlaintext', function() {
-    return function(text) {
-      return String(text).replace(/<[^>]+>/gm, '');
-    }
-  }
-);
-
-app.controller('areasController', [ '$http', '$scope', '$rootScope', function($http, $scope, $rootScope){
-
-	$scope.yourAPI = 'http://recorramisiones.com.ar/rutadelaselva/api';
-	$scope.items = [];
-	$scope.totalPages = 0;
-	$scope.currentPage = 1;
-	$scope.pageNumber = 1;
-	$scope.isFetching = true;
-	$scope.collapsed = false;
-
-	$scope.collapse = function(){
-		return $scope.collapsed=!$scope.collapsed;
-	}
-
-	$scope.getAllRecords = function(pageNumber){
-
-		$scope.isFetching = true;
-
-        $http.jsonp($scope.yourAPI+'/?json=get_category_posts&slug=areas-naturales-protegidas&status=publish'+$scope.pageNumber+'&callback=JSON_CALLBACK').success(function(response) {
-
-			$scope.items = $scope.items.concat(response.posts);
-			$scope.totalPages = response.pages;
-			$scope.isFetching = false;
-			if($scope.currentPage==$scope.totalPages){
-				$('.informes-page #moreButton').fadeOut('fast');	
-			}
-    	});
-	 
-	};
-
-	$scope.showPost = function(item){
-			
-		$rootScope.postContent = item;
-	    $scope.ons.navigator.pushPage('post.html');
-
-	};
-
-	$scope.nextPage = function(){
-		
-		$scope.pageNumber = ($scope.currentPage + 1);
-		if($scope.pageNumber <= $scope.totalPages){
-			$scope.getAllRecords($scope.pageNumber);
-			$scope.currentPage++;
-		}
-
-	}
-
-
-}]);
 
 // Mapa Controller
 
