@@ -46,7 +46,7 @@ ons-toolbar ~ .page__content {
 	border-bottom: none !important;
 }
 .list__item {
-	border: none !important;
+	border-bottom: none !important;
 	color: #fff;
 }
 
