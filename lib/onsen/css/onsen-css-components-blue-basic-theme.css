@@ -397,7 +397,6 @@ h6 {
   color: #1f1f21;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border-bottom: 1px solid #ddd;
   font-weight: 400;
   width: 100%;
   white-space: nowrap;
@@ -2520,8 +2519,6 @@ h6 {
   -webkit-overflow-scrolling: touch;
   padding: 0;
   background-color: #fff;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
   background-color: #fff;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -2549,7 +2546,6 @@ h6 {
   padding: 0 10px 0 10px;
   margin: 0 0 0 0;
   border-top: none;
-  border-bottom: 1px solid #ddd;
   color: #1f1f21;
   background-color: transparent;
   min-height: 44px;
