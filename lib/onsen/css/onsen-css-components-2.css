@@ -49,7 +49,7 @@ h6 {
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   font-size: 17px;
-  background-color: #504c44;
+  background-color: #343331;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -57,12 +57,13 @@ h6 {
   bottom: 0px;
   overflow: visible;
   font-size: 17px;
+  color: #f4a332;
 }
 .page::-webkit-scrollbar {
   display: none;
 }
 .page__content {
-  background-color: #504c44;
+  background-color: #343331;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -74,7 +75,7 @@ h6 {
   margin-top: -1px;
 }
 .page__background {
-  background-color: #504c44;
+  background-color: #343331;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -343,7 +344,7 @@ h6 {
   left: -1024px;
   width: 1024px;
   height: 2px;
-  background-color: #514d45;
+  background-color: #f4a332;
   content: '';
   margin: 0;
   padding: 0;
@@ -394,9 +395,8 @@ h6 {
   padding-right: 0;
   background: #252422;
   color: #f4a332;
-  -webkit-box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: none;
+  box-shadow: none;
   font-weight: 400;
   width: 100%;
   white-space: nowrap;
@@ -409,10 +409,10 @@ h6 {
     background-size: 100% 1px;
     background-repeat: no-repeat;
     background-position: bottom;
-    background-image: -webkit-linear-gradient(90deg, #343331, #343331 50%, transparent 50%);
-    background-image: -moz-linear-gradient(90deg, #343331, #343331 50%, transparent 50%);
-    background-image: -o-linear-gradient(90deg, #343331, #343331 50%, transparent 50%);
-    background-image: linear-gradient(0deg, #343331, #343331 50%, transparent 50%);
+    background-image: -webkit-linear-gradient(90deg, #252422, #252422 50%, transparent 50%);
+    background-image: -moz-linear-gradient(90deg, #252422, #252422 50%, transparent 50%);
+    background-image: -o-linear-gradient(90deg, #252422, #252422 50%, transparent 50%);
+    background-image: linear-gradient(0deg, #252422, #252422 50%, transparent 50%);
   }
 }
 .navigation-bar__line-height {
@@ -421,7 +421,7 @@ h6 {
   padding-top: 0;
 }
 .navigation-bar__bg {
-  background: #343331;
+  background: #252422;
 }
 .navigation-bar__item,
 .navigation-bar__left,
@@ -445,20 +445,6 @@ h6 {
   display: block;
   vertical-align: middle;
   float: left;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-}
-
-.navigation-bar__center {
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  background: #343331;
-  width: 46%;
-  text-align: center;
-  line-height: 44px;
-  font-size: 17px;
-  font-weight: 500;
-  color: #f4a332;
 }
 .navigation-bar__left {
   max-width: 50%;
@@ -470,16 +456,18 @@ h6 {
   width: 27%;
   text-align: right;
 }
-
-.center.navigation-bar__title.navigation-bar__center {
-background: transparent;
-}
-
-.navigation-bar__title {
-  background: #252422;
+.navigation-bar__center {
+  width: 46%;
+  text-align: center;
   line-height: 44px;
   font-size: 17px;
-  font-weight: 700;
+  font-weight: 500;
+  color: #f4a332;
+}
+.navigation-bar__title {
+  line-height: 44px;
+  font-size: 17px;
+  font-weight: 500;
   color: #f4a332;
   margin: 0;
   padding: 0;
@@ -667,7 +655,6 @@ background: transparent;
   background-color: transparent;
   background-image: none;
   border: none;
-  box-shadow: none;
 }
 /* topdoc
   name: Bottom Bar
@@ -709,12 +696,13 @@ background: transparent;
   height: 44px;
   padding-left: 0;
   padding-right: 0;
-  background: #343331;
+  background: #252422;
   color: #f4a332;
   -webkit-box-shadow: none;
   box-shadow: none;
   font-weight: 400;
   border-bottom: none;
+  border-top: 1px solid #252422;
   position: absolute;
   bottom: 0px;
   right: 0px;
@@ -727,10 +715,10 @@ background: transparent;
     background-size: 100% 1px;
     background-repeat: no-repeat;
     background-position: top;
-    background-image: -webkit-linear-gradient(270deg, #343331, #343331 50%, transparent 50%);
-    background-image: -moz-linear-gradient(270deg, #343331, #343331 50%, transparent 50%);
-    background-image: -o-linear-gradient(270deg, #343331, #343331 50%, transparent 50%);
-    background-image: linear-gradient(180deg, #343331, #343331 50%, transparent 50%);
+    background-image: -webkit-linear-gradient(270deg, #252422, #252422 50%, transparent 50%);
+    background-image: -moz-linear-gradient(270deg, #252422, #252422 50%, transparent 50%);
+    background-image: -o-linear-gradient(270deg, #252422, #252422 50%, transparent 50%);
+    background-image: linear-gradient(180deg, #252422, #252422 50%, transparent 50%);
   }
 }
 .bottom-bar__line-height {
@@ -813,7 +801,8 @@ background: transparent;
   letter-spacing: 0;
   color: #fff;
   vertical-align: middle;
-  background-color: #514d45;
+  background-color: #f4a332;
+  border: 0px solid currentColor;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   -webkit-transition: none;
@@ -828,7 +817,7 @@ background: transparent;
   transition: none;
 }
 .button:active {
-  background-color: #514d45;
+  background-color: #f4a332;
   -webkit-transition: none;
   -moz-transition: none;
   -o-transition: none;
@@ -854,17 +843,17 @@ background: transparent;
 */
 .button--outline {
   background-color: transparent;
-  border: 1px solid #514d45;
-  color: #514d45;
+  border: 1px solid #f4a332;
+  color: #f4a332;
 }
 .button--outline:active {
-  background-color: rgba(81,77,69,0.2);
-  border: 1px solid #514d45;
-  color: #514d45;
+  background-color: rgba(244,163,50,0.2);
+  border: 1px solid #f4a332;
+  color: #f4a332;
   opacity: 1;
 }
 .button--outline:hover {
-  border: 1px solid #514d45;
+  border: 1px solid #f4a332;
   -webkit-transition: 0;
   -moz-transition: 0;
   -o-transition: 0;
@@ -933,7 +922,7 @@ background: transparent;
   letter-spacing: 0;
   color: #fff;
   vertical-align: middle;
-  background-color: #514d45;
+  background-color: #f4a332;
   border: 0px solid currentColor;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -946,7 +935,7 @@ background: transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
   background: transparent;
-  color: #514d45;
+  color: #f4a332;
   border: none;
 }
 .button--quiet:disabled,
@@ -973,7 +962,7 @@ background: transparent;
   -o-transition: none;
   transition: none;
   opacity: 0.2;
-  color: #514d45;
+  color: #f4a332;
 }
 /* topdoc
   name: Call To Action Button
@@ -1019,7 +1008,7 @@ background: transparent;
   letter-spacing: 0;
   color: #fff;
   vertical-align: middle;
-  background-color: #514d45;
+  background-color: #f4a332;
   border: 0px solid currentColor;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -1070,10 +1059,9 @@ background: transparent;
   display: block;
   width: 100%;
   text-align: center;
-  border: none;
 }
 .button--large:active {
-  background-color: #514d45;
+  background-color: #f4a332;
   -webkit-transition: none;
   -moz-transition: none;
   -o-transition: none;
@@ -1142,7 +1130,8 @@ background: transparent;
   letter-spacing: 0;
   color: #fff;
   vertical-align: middle;
-  background-color: #514d45;
+  background-color: #f4a332;
+  border: 0px solid currentColor;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   -webkit-transition: none;
@@ -1156,9 +1145,10 @@ background: transparent;
   display: block;
   width: 100%;
   background: transparent;
+  border: 1px solid transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
-  color: #514d45;
+  color: #f4a332;
   text-align: center;
 }
 .button--large--quiet:active {
@@ -1167,11 +1157,11 @@ background: transparent;
   -o-transition: none;
   transition: none;
   opacity: 0.2;
-  color: #514d45;
+  color: #f4a332;
   background: transparent;
+  border: 1px solid transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
-  opacity: 0.2;
 }
 .button--large--quiet:disabled,
 .button--large--quiet[disabled] {
@@ -1231,7 +1221,8 @@ background: transparent;
   letter-spacing: 0;
   color: #fff;
   vertical-align: middle;
-  background-color: #514d45;
+  background-color: #f4a332;
+  border: 0px solid currentColor;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   -webkit-transition: none;
@@ -1404,7 +1395,7 @@ background: transparent;
 .button-bar__item.active > .button-bar__button,
 :checked + .button-bar__button {
   background-color: #f4a332;
-  color: #514d45;
+  color: #fff;
   -webkit-transition: none;
   -moz-transition: none;
   -o-transition: none;
@@ -1606,7 +1597,7 @@ background: transparent;
   padding: 0;
   height: 49px;
   letter-spacing: 0;
-  color: #f4a332;
+  color: #514d45;
   text-shadow: 0 1px none;
   vertical-align: top;
   background-color: transparent;
@@ -1650,17 +1641,17 @@ background: transparent;
   padding: 0;
 }
 .tab-bar__button {
-  color: #f4a332;
+  color: #514d45;
 }
 :checked + .tab-bar__button {
-  color: #514d45;
+  color: #f4a332;
   background-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
   border-top: none;
 }
 :checked + .tab-bar__button > .tab-bar__icon {
-  color: #514d45;
+  color: #f4a332;
 }
 .tab-bar__button:disabled {
   opacity: 0.3;
@@ -1819,7 +1810,7 @@ background: transparent;
 }
 :checked + .tab-bar--top-border__button {
   background-color: transparent;
-  border-bottom: 4px solid #514d45;
+  border-bottom: 4px solid #f4a332;
 }
 /* topdoc
   name: Notification
@@ -1864,7 +1855,7 @@ background: transparent;
   height: 19px;
   -webkit-border-radius: 19px;
   border-radius: 19px;
-  background-color: #252422;
+  background-color: #dc5236;
   color: #fff;
   text-align: center;
   font-size: 16px;
@@ -2040,11 +2031,11 @@ background: transparent;
   width: 0;
 }
 .checkbox > input[type="checkbox"]:checked {
-  background: #514d45;
+  background: #f4a332;
 }
 .checkbox > input[type="checkbox"]:checked + .checkbox__checkmark:before {
-  background: #514d45;
-  border: 1px solid #514d45;
+  background: #f4a332;
+  border: 1px solid #f4a332;
 }
 .checkbox > input[type="checkbox"]:checked + .checkbox__checkmark:after {
   opacity: 1;
@@ -2060,7 +2051,7 @@ background: transparent;
   width: 24px;
   height: 24px;
   background: transparent;
-  border: 1px solid #514d45;
+  border: 1px solid #f4a332;
   -webkit-border-radius: 16px;
   border-radius: 16px;
   -webkit-box-shadow: none;
@@ -2269,7 +2260,7 @@ background: transparent;
   width: 12px;
   height: 6px;
   background: transparent;
-  border: 3px solid #514d45;
+  border: 3px solid #f4a332;
   border-width: 2px;
   border-top: none;
   border-right: none;
@@ -2434,7 +2425,7 @@ background: transparent;
   width: 12px;
   height: 6px;
   background: transparent;
-  border: 3px solid #514d45;
+  border: 3px solid #f4a332;
   border-width: 2px;
   border-top: none;
   border-right: none;
@@ -2469,7 +2460,7 @@ background: transparent;
   border-bottom: none;
 }
 .list__header {
-  margin-left: 0;
+  margin: 0;
   padding: 0;
   list-style: none;
   text-align: left;
@@ -2480,7 +2471,7 @@ background: transparent;
   padding: 0 0 0 10px;
   font-size: 15px;
   font-weight: 500;
-  background-color: #252422;
+  background-color: #343331;
   color: #f4a332;
   text-shadow: none;
   border-top: none;
@@ -2503,9 +2494,7 @@ background: transparent;
 }
 .list {
   padding: 0;
-  margin-left: 10%;
-  margin-top: 10px;
-  margin-right: 10px;
+  margin: 0;
   font: inherit;
   color: inherit;
   background: transparent;
@@ -2522,12 +2511,15 @@ background: transparent;
   font-weight: 400;
   font-size: 17px;
   padding: 0;
+  margin: 0;
   list-style-type: none;
   text-align: left;
   overflow: auto;
   display: block;
   -webkit-overflow-scrolling: touch;
   padding: 0;
+  background-color: #343331;
+  background-color: #343331;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .list {
@@ -2574,10 +2566,9 @@ background: transparent;
   transition: none;
 }
 .list__item:first-child {
-  border: none;
+  border-top: none;
 }
 .list__item:last-child {
-border-top: none;
   border-bottom: none;
 }
 .list__item:first-child:last-child {
@@ -2768,7 +2759,6 @@ border-top: none;
   background-image: none;
 }
 .list--inset__item:not(:last-child) {
-  border-bottom: 1px solid #343331;
   background-image: none;
 }
 /* topdoc
@@ -2935,7 +2925,10 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   box-sizing: border-box;
   height: 31px;
   font-size: 15px;
+  border: 1px solid #343331;
+  background-color: #343331;
   -webkit-box-shadow: none;
+  box-shadow: none;
   color: #f4a332;
   padding: 4px 0 0 28px;
   -webkit-border-radius: 4px;
@@ -2950,18 +2943,22 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   width: 100%;
 }
 .search-input:focus {
+  background-color: #343331;
   color: #f4a332;
+  border: 1px solid #343331;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 .search-input::-webkit-search-cancel-button,
 .search-input::-webkit-search-decoration {
   margin-right: 0px;
+  margin: 6px auto 6px auto;
 }
 .search-input::-webkit-input-placeholder,
 .search-input::-moz-placeholder,
 .search-input::-ms-input-placeholder {
-  color: #343331;
+  color: #f4a332;
+  margin: 6px auto 6px auto;
 }
 .search-input:disabled {
   opacity: 0.3;
@@ -3005,6 +3002,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   border: 1px solid #343331;
   -webkit-border-radius: 4px;
   border-radius: 4px;
+  background-color: #343331;
   -webkit-box-shadow: none;
   box-shadow: none;
   color: #f4a332;
@@ -3020,7 +3018,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
 .text-input::-webkit-input-placeholder,
 .text-input::-moz-placeholder,
 .text-input::-ms-input-placeholder {
-  color: #343331;
+  color: #f4a332;
 }
 .text-input:disabled {
   opacity: 0.3;
@@ -3030,7 +3028,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
 .text-input:disabled::-webkit-input-placeholder,
 .text-input:disabled::-moz-placeholder,
 .text-input:disabled:-ms-input-placeholder {
-  color: #343331;
+  color: #f4a332;
 }
 .text-input:invalid {
   border: 1px solid var-input-invalid-border-color;
@@ -3069,7 +3067,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   border: 1px solid #343331;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  background-color: #504c44;
+  background-color: #343331;
   -webkit-box-shadow: none;
   box-shadow: none;
   color: #f4a332;
@@ -3096,7 +3094,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
 .text-input--transparent:disabled::-webkit-input-placeholder,
 .text-input--transparent:disabled::-moz-placeholder,
 .text-input--transparent:disabled:-ms-input-placeholder {
-  color: #343331;
+  color: #f4a332;
   border: none;
   background-color: transparent;
 }
@@ -3139,7 +3137,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   border: 1px solid #343331;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  background-color: #504c44;
+  background-color: #343331;
   -webkit-box-shadow: none;
   box-shadow: none;
   color: #f4a332;
@@ -3153,7 +3151,6 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   box-sizing: border-box;
   border: none;
   background-color: transparent;
-  border-bottom: 1px solid #343331;
   -webkit-border-radius: 0px;
   border-radius: 0px;
 }
@@ -3163,12 +3160,11 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   pointer-events: none;
   border: none;
   background-color: transparent;
-  border-bottom: 1px solid #343331;
 }
 .text-input--underbar:disabled::-webkit-input-placeholder,
 .text-input--underbar:disabled::-moz-placeholder,
 .text-input--underbar:disabled:-ms-input-placeholder {
-  color: #343331;
+  color: #f4a332;
   border: none;
   background-color: transparent;
 }
@@ -3215,7 +3211,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   -webkit-border-radius: 4px;
   border-radius: 4px;
   border: 1px solid #343331;
-  background-color: #504c44;
+  background-color: #343331;
   color: #f4a332;
   letter-spacing: 0;
   -webkit-box-shadow: none;
@@ -3230,7 +3226,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
 .textarea::-webkit-input-placeholder,
 .textarea::-moz-placeholder,
 .textarea:-ms-input-placeholder {
-  color: #343331;
+  color: #f4a332;
 }
 /* topdoc
   name: Textarea Transparent
@@ -3285,7 +3281,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
 .textarea--transpanret::-webkit-input-placeholder,
 .textarea--transparent::-moz-placeholder,
 .textarea--transparent:-ms-input-placeholder {
-  color: #343331;
+  color: #f4a332;
 }
 /* topdoc
   name: Dialog
@@ -3330,7 +3326,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   margin: auto auto;
-  background-color: rgba(255,255,255,0.92);
+  background-color: #343331;
   -webkit-box-shadow: 0 2px 12px rgba(0,0,0,0.07);
   box-shadow: 0 2px 12px rgba(0,0,0,0.07);
   overflow: hidden;
@@ -3478,7 +3474,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   letter-spacing: 0;
   vertical-align: middle;
   border: none;
-  border-top: 1px solid #514d45;
+  border-top: 1px solid #252422;
   font-size: 16px;
   padding: 0 8px;
   margin: 0;
@@ -3498,10 +3494,10 @@ input[type="search"].search-input::-webkit-search-cancel-button {
     background-size: 100% 1px;
     background-repeat: no-repeat;
     background-position: top;
-    background-image: -webkit-linear-gradient(270deg, #514d45, #514d45 50%, transparent 50%);
-    background-image: -moz-linear-gradient(270deg, #514d45, #514d45 50%, transparent 50%);
-    background-image: -o-linear-gradient(270deg, #514d45, #514d45 50%, transparent 50%);
-    background-image: linear-gradient(180deg, #514d45, #514d45 50%, transparent 50%);
+    background-image: -webkit-linear-gradient(270deg, #252422, #252422 50%, transparent 50%);
+    background-image: -moz-linear-gradient(270deg, #252422, #252422 50%, transparent 50%);
+    background-image: -o-linear-gradient(270deg, #252422, #252422 50%, transparent 50%);
+    background-image: linear-gradient(180deg, #252422, #252422 50%, transparent 50%);
   }
 }
 .alert-dialog-button:active {
@@ -3531,7 +3527,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   flex: 1;
   display: block;
   width: 100%;
-  border-left: 1px solid #514d45;
+  border-left: 1px solid #252422;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .alert-dialog-button--one {
@@ -3541,10 +3537,10 @@ input[type="search"].search-input::-webkit-search-cancel-button {
     background-size: 100% 1px, 1px 100%;
     background-repeat: no-repeat;
     background-position: top, left;
-    background-image: -webkit-linear-gradient(90deg, transparent, transparent 50%, #514d45 50%), -webkit-linear-gradient(0deg, transparent, transparent 50%, #514d45 50%);
-    background-image: -moz-linear-gradient(90deg, transparent, transparent 50%, #514d45 50%), -moz-linear-gradient(0deg, transparent, transparent 50%, #514d45 50%);
-    background-image: -o-linear-gradient(90deg, transparent, transparent 50%, #514d45 50%), -o-linear-gradient(0deg, transparent, transparent 50%, #514d45 50%);
-    background-image: linear-gradient(0deg, transparent, transparent 50%, #514d45 50%), linear-gradient(90deg, transparent, transparent 50%, #514d45 50%);
+    background-image: -webkit-linear-gradient(90deg, transparent, transparent 50%, #252422 50%), -webkit-linear-gradient(0deg, transparent, transparent 50%, #252422 50%);
+    background-image: -moz-linear-gradient(90deg, transparent, transparent 50%, #252422 50%), -moz-linear-gradient(0deg, transparent, transparent 50%, #252422 50%);
+    background-image: -o-linear-gradient(90deg, transparent, transparent 50%, #252422 50%), -o-linear-gradient(0deg, transparent, transparent 50%, #252422 50%);
+    background-image: linear-gradient(0deg, transparent, transparent 50%, #252422 50%), linear-gradient(90deg, transparent, transparent 50%, #252422 50%);
   }
 }
 .alert-dialog-button--one:first-child {
@@ -3557,10 +3553,10 @@ input[type="search"].search-input::-webkit-search-cancel-button {
     background-size: 100% 1px;
     background-repeat: no-repeat;
     background-position: top, left;
-    background-image: -webkit-linear-gradient(90deg, transparent, transparent 50%, #514d45 50%);
-    background-image: -moz-linear-gradient(90deg, transparent, transparent 50%, #514d45 50%);
-    background-image: -o-linear-gradient(90deg, transparent, transparent 50%, #514d45 50%);
-    background-image: linear-gradient(0deg, transparent, transparent 50%, #514d45 50%);
+    background-image: -webkit-linear-gradient(90deg, transparent, transparent 50%, #252422 50%);
+    background-image: -moz-linear-gradient(90deg, transparent, transparent 50%, #252422 50%);
+    background-image: -o-linear-gradient(90deg, transparent, transparent 50%, #252422 50%);
+    background-image: linear-gradient(0deg, transparent, transparent 50%, #252422 50%);
   }
 }
 .alert-dialog-mask {
@@ -3666,7 +3662,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   box-shadow: none;
 }
 .alert-dialog-title--android {
-  border-bottom: 1px solid #514d45;
+  border-bottom: 1px solid #252422;
   height: 52px;
   line-height: 52px;
   padding: 0 12px;
@@ -3725,12 +3721,12 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   min-height: 100px;
 }
 .popover__content {
-  background-color: #514d45;
+  background-color: #343331;
   -webkit-border-radius: 8px;
   border-radius: 8px;
   -webkit-box-shadow: 0 2px 16px rgba(0,0,0,0.1);
   box-shadow: 0 2px 16px rgba(0,0,0,0.1);
-  color: #1f1f21;
+  color: #f4a332;
   overflow: hidden;
   min-height: 100px;
 }
@@ -3748,10 +3744,10 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   -o-transform-origin: 50% 50% 0;
   transform-origin: 50% 50% 0;
   background-color: transparent;
-  background-image: -webkit-linear-gradient(45deg, #514d45, #514d45 50%, transparent 50%);
-  background-image: -moz-linear-gradient(45deg, #514d45, #514d45 50%, transparent 50%);
-  background-image: -o-linear-gradient(45deg, #514d45, #514d45 50%, transparent 50%);
-  background-image: linear-gradient(45deg, #514d45, #514d45 50%, transparent 50%);
+  background-image: -webkit-linear-gradient(45deg, #343331, #343331 50%, transparent 50%);
+  background-image: -moz-linear-gradient(45deg, #343331, #343331 50%, transparent 50%);
+  background-image: -o-linear-gradient(45deg, #343331, #343331 50%, transparent 50%);
+  background-image: linear-gradient(45deg, #343331, #343331 50%, transparent 50%);
   -webkit-border-radius: 0 0 0 4px;
   border-radius: 0 0 0 4px;
   -webkit-transform: rotate(-45deg);
@@ -3775,10 +3771,10 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   -o-transform-origin: 50% 50% 0;
   transform-origin: 50% 50% 0;
   background-color: transparent;
-  background-image: -webkit-linear-gradient(45deg, #514d45, #514d45 50%, transparent 50%);
-  background-image: -moz-linear-gradient(45deg, #514d45, #514d45 50%, transparent 50%);
-  background-image: -o-linear-gradient(45deg, #514d45, #514d45 50%, transparent 50%);
-  background-image: linear-gradient(45deg, #514d45, #514d45 50%, transparent 50%);
+  background-image: -webkit-linear-gradient(45deg, #343331, #343331 50%, transparent 50%);
+  background-image: -moz-linear-gradient(45deg, #343331, #343331 50%, transparent 50%);
+  background-image: -o-linear-gradient(45deg, #343331, #343331 50%, transparent 50%);
+  background-image: linear-gradient(45deg, #343331, #343331 50%, transparent 50%);
   -webkit-border-radius: 0 0 0 4px;
   border-radius: 0 0 0 4px;
   -webkit-transform: rotate(135deg);
@@ -3802,10 +3798,10 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   -o-transform-origin: 50% 50% 0;
   transform-origin: 50% 50% 0;
   background-color: transparent;
-  background-image: -webkit-linear-gradient(45deg, #514d45, #514d45 50%, transparent 50%);
-  background-image: -moz-linear-gradient(45deg, #514d45, #514d45 50%, transparent 50%);
-  background-image: -o-linear-gradient(45deg, #514d45, #514d45 50%, transparent 50%);
-  background-image: linear-gradient(45deg, #514d45, #514d45 50%, transparent 50%);
+  background-image: -webkit-linear-gradient(45deg, #343331, #343331 50%, transparent 50%);
+  background-image: -moz-linear-gradient(45deg, #343331, #343331 50%, transparent 50%);
+  background-image: -o-linear-gradient(45deg, #343331, #343331 50%, transparent 50%);
+  background-image: linear-gradient(45deg, #343331, #343331 50%, transparent 50%);
   -webkit-border-radius: 0 0 0 4px;
   border-radius: 0 0 0 4px;
   -webkit-transform: rotate(45deg);
@@ -3829,10 +3825,10 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   -o-transform-origin: 50% 50% 0;
   transform-origin: 50% 50% 0;
   background-color: transparent;
-  background-image: -webkit-linear-gradient(45deg, #514d45, #514d45 50%, transparent 50%);
-  background-image: -moz-linear-gradient(45deg, #514d45, #514d45 50%, transparent 50%);
-  background-image: -o-linear-gradient(45deg, #514d45, #514d45 50%, transparent 50%);
-  background-image: linear-gradient(45deg, #514d45, #514d45 50%, transparent 50%);
+  background-image: -webkit-linear-gradient(45deg, #343331, #343331 50%, transparent 50%);
+  background-image: -moz-linear-gradient(45deg, #343331, #343331 50%, transparent 50%);
+  background-image: -o-linear-gradient(45deg, #343331, #343331 50%, transparent 50%);
+  background-image: linear-gradient(45deg, #343331, #343331 50%, transparent 50%);
   -webkit-border-radius: 0 0 0 4px;
   border-radius: 0 0 0 4px;
   -webkit-transform: rotate(225deg);
@@ -3973,72 +3969,6 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-  color: #f4a332;
+  color: #fff;
   white-space: normal;
-}
-ons-button.ion-android-share.ng-isolate-scope.button.effeckt-button.button--large--cta.slide-left {
-display: inherit;
-color: #f4a332;
-font-size: 20px;
-}
-
-}
-ons-button.ion-android-share.ng-isolate-scope.button.effeckt-button.button--large--cta.slide-left:active {
-display: inherit;
-color: #f4a332;
-opacity: 0.2;
-}
-
-ons-button.ion-android-search.ng-isolate-scope.button.effeckt-button.button--large--cta.slide-left {
-display: inherit;
-color: #f4a332;
-font-size: 20px;
-}
-
-ons-button.ion-android-search.ng-isolate-scope.button.effeckt-button.button--large--cta.slide-left:active{
-display: inherit;
-color: #f4a332;
-opacity: 0.2;
-}
-
-
-span.ng-scope.ng-binding {
-color: #f4a332;
-position: absolute;
-left: 35px;
-bottom: 50px;
-margin: 0;
-z-index: 3;
-}
-
-i.ion-pricetags {
-color: #f4a332;
-position: absolute;
-left: 15px;
-bottom: 50px;
-margin: 0;
-z-index: 3;
-}
-
-.searchbar {
--webkit-box-shadow: none !important;
-box-shadow: none !important;
-background: #343331;
-width: 100%;
-text-align: center;
-line-height: 44px;
-font-size: 17px;
-font-weight: 500;
-color: #f4a332;
-padding: 1px;
-}
-
-input.search-input.ng-pristine.ng-valid {
-width: 96%;
-margin: 6px auto 6px auto;
-}
-
-input.search-input.ng-valid.ng-dirty {
-width: 96%;
-margin: 6px auto 6px auto;
 }

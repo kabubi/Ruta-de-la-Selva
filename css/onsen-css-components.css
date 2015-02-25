@@ -397,7 +397,6 @@ h6 {
   color: #1f1f21;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border-bottom: 1px solid #ddd;
   font-weight: 400;
   width: 100%;
   white-space: nowrap;
@@ -1755,7 +1754,6 @@ h6 {
   right: 0px;
   bottom: auto;
   border-top: none;
-  border-bottom: 1px solid #ddd;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .tab-bar--top {
@@ -2520,8 +2518,6 @@ h6 {
   -webkit-overflow-scrolling: touch;
   padding: 0;
   background-color: #fff;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
   background-color: #fff;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -2549,7 +2545,6 @@ h6 {
   padding: 0 10px 0 10px;
   margin: 0 0 0 0;
   border-top: none;
-  border-bottom: 1px solid #ddd;
   color: #1f1f21;
   background-color: transparent;
   min-height: 44px;
@@ -2571,7 +2566,6 @@ h6 {
 }
 .list__item:first-child {
   border-top: none;
-  border-bottom: 1px solid #ddd;
 }
 .list__item:last-child {
   border-bottom: none;
@@ -2764,7 +2758,6 @@ h6 {
   background-image: none;
 }
 .list--inset__item:not(:last-child) {
-  border-bottom: 1px solid #ddd;
   background-image: none;
 }
 /* topdoc
@@ -3165,7 +3158,6 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   pointer-events: none;
   border: none;
   background-color: transparent;
-  border-bottom: 1px solid #ddd;
 }
 .text-input--underbar:disabled::-webkit-input-placeholder,
 .text-input--underbar:disabled::-moz-placeholder,
@@ -3668,7 +3660,6 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   box-shadow: none;
 }
 .alert-dialog-title--android {
-  border-bottom: 1px solid #ddd;
   height: 52px;
   line-height: 52px;
   padding: 0 12px;
