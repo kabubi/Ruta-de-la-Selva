@@ -1,31 +1,31 @@
 <ons-page modifier="menu-page">
   <ons-toolbar modifier="transparent"></ons-toolbar>
   <ons-list class="menu-list">
-    <ons-list-item class="menu-item" ng-click="menu.setMainPage('home.html', {closeMenu: true})">
+    <ons-list-item class="menu-item" ng-click="menu.setMainPage('home.html', {closeMenu: true}) ">
       <ons-icon icon="fa-home" fixed-width="true"></ons-icon>
       Inicio
     </ons-list-item>
-	<ons-list-item class="menu-item" ng-click="menu.setMainPage('areas.html', {closeMenu: true})">
+	<ons-list-item class="menu-item" ng-click="menu.closeMenu(); gallery.pushPage('areas.html');">
       <ons-icon icon="fa-leaf" fixed-width="true"></ons-icon>
        Areas Naturales
     </ons-list-item>
-    <ons-list-item class="menu-item" ng-click="menu.setMainPage('informes.html', {closeMenu: true})">
+    <ons-list-item class="menu-item" ng-click="menu.closeMenu(); gallery.pushPage('informes.html'); ">
       <ons-icon icon="fa-info-circle" fixed-width="true"></ons-icon>
       Informes Turísticos
     </ons-list-item>
-	<ons-list-item class="menu-item" ng-click="menu.setMainPage('atractivos.html', {closeMenu: true})">
+	<ons-list-item class="menu-item" ng-click="menu.closeMenu(); gallery.pushPage('atractivos.html'); ">
       <ons-icon icon="fa-camera" fixed-width="true"></ons-icon>
        Atractivos y Actividades
     </ons-list-item>
-    <ons-list-item class="menu-item" ng-click="menu.setMainPage('alojamientos.html', {closeMenu: true})">
+    <ons-list-item class="menu-item" ng-click="menu.closeMenu(); gallery.pushPage('alojamientos.html'); ">
       <ons-icon icon="fa-building" fixed-width="true"></ons-icon>
       Alojamientos
     </ons-list-item>	
-	<ons-list-item class="menu-item" ng-click="menu.setMainPage('hospitales.html', {closeMenu: true})">
+	<ons-list-item class="menu-item" ng-click="menu.closeMenu(); gallery.pushPage('hospitales.html'); ">
       <ons-icon icon="fa-plus-square" fixed-width="true"></ons-icon>
        Hospitales y Servicios
     </ons-list-item>
-    <ons-list-item class="menu-item" ng-click="menu.setMainPage('markers.html', {closeMenu: true})">
+    <ons-list-item class="menu-item" ng-click="menu.closeMenu(); gallery.pushPage('markers.html'); ">
       <ons-icon icon="fa-map-marker" fixed-width="true"></ons-icon>
       Mapa
     </ons-list-item>

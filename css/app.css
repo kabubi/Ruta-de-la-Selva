@@ -131,10 +131,6 @@ ons-list.menu-list.list.ons-list-inner {
 .button {
 	background-color: transparent;
 }
-input.search-input.ng-pristine.ng-valid {
-	width: 96%;
-	margin: 6px auto 6px auto;
-}
 .searchbar {
 	-moz-box-shadow: inset 0 8px 8px -8px rgba(0, 0, 0, 0.5);
 	-webkit-box-shadow: inset 0 8px 8px -8px rgba(0, 0, 0, 0.5);
@@ -161,9 +157,33 @@ input.search-input.ng-pristine.ng-valid {
 }
 input.search-input {
 	width: 96%;
-	margin: 6px auto 6px auto;
+	padding: 20px 20px 20px 30px;
 	color: #f4a332 !important;
 }
 .list__item--chevron:before {
 	color: transparent;
+}
+.app-page .app-hero.app-hero-image h2 {
+	color: #fff;
+	position: absolute;
+	left: 15px;
+	bottom: 15px;
+	margin: 0;
+	z-index: 3;
+}
+span.ng-binding.ng-scope {
+	color: #f4a332;
+	position: absolute;
+	left: 35px;
+	bottom: 50px;
+	margin: 0;
+	z-index: 3;
+}
+i.ion-pricetags {
+	color: #f4a332;
+	position: absolute;
+	left: 15px;
+	bottom: 50px;
+	margin: 0;
+	z-index: 3;
 }
