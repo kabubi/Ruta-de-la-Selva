@@ -7,9 +7,10 @@
 	  <ons-toolbar-button ng-click="openSocialSharing()" ><ons-icon icon="ion-android-share"></ons-icon></ons-toolbar-button>
     </div>
     <div class="center">{{ item.title | limitTo: 20 }}</div>
-  </ons-toolbar>
+  </ons-toolbar>  
+  
   <div class="app-page">
-    <div class="app-hero app-hero-image">
+    <div class="app-hero app-hero-image is-loading" images-loaded="imgLoadedEvents">
 	  <i class="ion-pricetags"></i> <span ng-repeat="cat in item.categories">{{cat.title}} </span>
       <h2>{{ item.title | limitTo: 25 }}</h2>
       <div class="app-hero-overlay"></div>
