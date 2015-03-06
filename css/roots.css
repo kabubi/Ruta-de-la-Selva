@@ -588,10 +588,6 @@ img.bg {
   bottom: 15px;
   margin: 0;
   z-index: 3;
-  font-size: 22px;
-  width: 90%;
-  display: block;
-  text-align: center;
 }
 .app-page .app-hero.app-hero-image .app-hero-bg {
   width: 100%;
