@@ -6,11 +6,12 @@
   	  <div class="right">
   		  <ons-toolbar-button ng-click="collapse()" ><ons-icon icon="ion-android-search"></ons-icon></ons-toolbar-button>
       </div>
-      <div class="center">Areas Naturales</div>
+      <div class="center">Areas Naturales 
+		<div class="searchbar">        		
+			<input ng-show="collapsed" type="search" class="search-input" ng-model="search" placeholder="Buscar...">
+		</div>
+	  </div>
     </ons-toolbar>
-    <div class="searchbar">        
-      <input ng-show="collapsed" type="search" class="search-input" ng-model="search" placeholder="Buscar">
-    </div>
     <div class="app-page areas-page">
       <ons-list modifier="news">
         <ons-list-item modifier="chevron" class="list-item-container" ng-repeat="item in items | filter:search" ng-click="showPost(item)">
