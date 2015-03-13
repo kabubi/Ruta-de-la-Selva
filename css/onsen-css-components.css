@@ -543,10 +543,7 @@ h6 {
     </div>
 */
 .navigation-bar--android__left {
-  float: left;
-  text-align: left;
-  width: auto;
-  min-width: 10px;
+
 }
 .navigation-bar--android__center {
   float: left;

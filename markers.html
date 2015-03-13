@@ -19,6 +19,11 @@
           </div>
         </div>
       </info-window>
+	  
+	  <shape id="polyline" name="polyline" 
+      geodesic="true" stroke-color="#f4a604" stroke-opacity="1.0" stroke-weight="3"
+      path="[[-27.13, -54.90],[-27.05, -54.84],[-26.99, -54.62],[-25.91, -54.61]]" >
+	  </shape>
 
       <marker ng-repeat="(id, marker) in markers" id="{{ id }}" 
     	position="{{marker.location}}" 
