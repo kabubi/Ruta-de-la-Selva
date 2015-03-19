@@ -96,8 +96,14 @@ ons-toolbar ~ .page__content {
 	box-shadow: none;
 }
 ons-list.menu-list.list.ons-list-inner {
-	margin-top: 60%;
-	margin-left: 10px;
+	background-image: url('../images/menuheader.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-position: 0px 0px !important;
+    background-size: 100% auto !important;
+    padding-top: 60%;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 .menu-list {
 	background-color: transparent;
@@ -107,13 +113,9 @@ ons-list.menu-list.list.ons-list-inner {
 }
 .page__content.ons-page-inner.page--menu-page__content {
 	background-color: #252422 !important;
-	background-image: url('../images/menuheader.jpg') !important;
-	background-repeat: no-repeat !important;
-	background-position: 0px 0px !important;
-	background-size: 100% auto !important;
+    background-image: none !important;
 }
 .menu-item {
-	padding: 0 0 0 0px;
 	line-height: 52px;
 	height: 52px;
 	text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 0px;
@@ -186,4 +188,12 @@ i.ion-pricetags {
 	bottom: 50px;
 	margin: 0;
 	z-index: 3;
+}
+ons-button.ng-isolate-scope.button.effeckt-button.button--large.slide-left {
+  overflow: hidden;
+  background-color: #252422;
+  margin-top: 20px;
+}
+ons-button#moreButton {
+  background-color: transparent;
 }
