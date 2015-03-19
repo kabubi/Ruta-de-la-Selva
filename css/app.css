@@ -200,3 +200,7 @@ ons-button#moreButton {
 span.ng-scope {
   color: #f4a332;
 }
+.navigation-bar--android__center {
+  text-align: center;
+  width: 46%;
+}
