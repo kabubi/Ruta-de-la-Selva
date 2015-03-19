@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.cm.rutadelaselva" 
-    version="2.0" 
+    version="2.1" 
     xmlns="http://www.w3.org/ns/widgets" 
     xmlns:android = "http://schemas.android.com/apk/res/android"
     xmlns:gap="http://phonegap.com/ns/1.0">
@@ -47,6 +47,9 @@
     <gap:splash src="res/screen/ios/Default-Landscape.png"     gap:platform="ios"     width="1024" height="768" />
     
     <gap:plugin name="nl.x-services.plugins.socialsharing" />
+	<gap:plugin name="org.apache.cordova.file" />
+	<gap:plugin name="org.apache.cordova.file-transfer" />
+    <gap:plugin name="org.apache.cordova.network-information" />
     
     <gap:config-file platform="android" parent="/manifest">
         <supports-screens 
