@@ -957,26 +957,17 @@
 
 	}); 
   
-  // Mapa Controller
-  app.controller('mapaController', function($scope){
-
-	$scope.start = function() {
-
-	  $('#mapplic').mapplic({
-		source: 'lugares.json',
-		sidebar: false,
-		minimap: true,
-		locations: true,
-		deeplinking: false,
-		fullscreen: false,
-		hovertip: false,
-		developer: false,
-		maxscale: 4
-	  });
-
-	}
-
-  });
+  // Limpiar cache
+    function limpiarCache() {
+  
+        $scope.currentPage = 1;
+        $scope.pageNumber = 1;
+        $scope.lastSavedPage = 0;
+        window.localStorage.removeItem($scope.localSavePrefix+"rootsLastPage");
+        window.localStorage.removeItem($scope.localSavePrefix+"rootsPosts");
+        window.localStorage.removeItem($scope.localSavePrefix+"rootsTotalPages");
+        window.localStorage.removeItem($scope.localSavePrefix+"rootsDate");
+    }
 
 
 })();
