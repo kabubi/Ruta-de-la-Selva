@@ -16,8 +16,7 @@
 }
 
 /* GLOBAL */
-body { font: 11px Arial, Helvetica, Verdana, sans-serif; line-height: 16px; color: #333; margin-left: 10%;
-  margin-right: 10px;}
+body { font: 11px Arial, Helvetica, Verdana, sans-serif; line-height: 16px; color: #333; margin-right: 10px;}
 h1 { font-size: 14px; line-height: 1.25em; margin: 0 0 16px 0; }
 h2 { font-size: 24px; font-style: normal; font-weight: 300; line-height: 1.25em; margin: 0 0 18px 0; }
 h3, h4, h5, h6 { font-size: 11px; line-height: 1.25em; margin: 0; }
@@ -38,7 +37,7 @@ sub { top: 0.4em; }
 .arrow_box p { margin-bottom: 0; }
 
 /* FACEBOOK - WALL */
-#facebook_wall {  }
+#facebook_wall { list-style: none;}
 
 #facebook_wall .facebook-loading { width: 16px; height: 16px; margin: -8px 0 0 -8px; background: url('images/loader.png') no-repeat 50% 50%; position: absolute; top: 100px; left: 50%; }
 #facebook_wall .facebook-loading { -moz-animation: update-spinner 1s linear infinite; -webkit-animation: update-spinner 1s linear infinite; -ms-animation: update-spinner 1s linear infinite; animation: update-spinner 1s linear infinite; }
