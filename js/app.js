@@ -83,7 +83,7 @@
 	// http://www.recorramisiones.com.ar/rutadelaselva/api/get_category_posts/?slug=informes-turisticos
 	// http://www.recorramisiones.com.ar/rutadelaselva/api/?json=get_category_posts&slug=informes-turisticos&count=5&status=publish
 	
-    $scope.yourAPI = 'http://www.recorramisiones.com.ar/rutadelaselva/api/?json=get_category_posts&slug=informes-turisticos&count=5'; 
+    $scope.yourAPI = 'http://www.recorramisiones.com.ar/rutadelaselva/api/get_category_posts/?slug=informes-turisticos'; 
     $scope.items = [];
     $scope.totalPages = 0;
     $scope.currentPage = 1;
@@ -236,8 +236,8 @@
   // Controlador Atractivos
   app.controller('atractivosController', [ '$http', '$scope', '$rootScope', function($http, $scope, $rootScope){
 
-    // I'm using the same post type video, but you will need another custom post type for this one
-    $scope.yourAPI = 'http://www.recorramisiones.com.ar/rutadelaselva/api/?json=get_category_posts&slug=atractivos-actividades&count=5'; 
+    // I'm using the same post type video, but you will need another custom post type for this one	
+    $scope.yourAPI = 'http://www.recorramisiones.com.ar/rutadelaselva/api/get_category_posts/?slug=atractivos-actividades'; 
     $scope.items = [];
     $scope.totalPages = 0;
     $scope.currentPage = 1;
@@ -394,7 +394,7 @@
 	// http://www.recorramisiones.com.ar/rutadelaselva/api/?json=get_category_posts&slug=alojamientos&count=5&status=publish
 	// http://www.recorramisiones.com.ar/rutadelaselva/api/get_category_posts/?slug=alojamientos
 	
-    $scope.yourAPI = 'http://www.recorramisiones.com.ar/rutadelaselva/api/?json=get_category_posts&slug=alojamientos&count=5'; 
+    $scope.yourAPI = 'http://www.recorramisiones.com.ar/rutadelaselva/api/get_category_posts/?slug=alojamientos'; 
     $scope.items = [];
     $scope.totalPages = 0;
     $scope.currentPage = 1;
@@ -548,7 +548,7 @@
   app.controller('serviciosController', [ '$http', '$scope', '$rootScope', function($http, $scope, $rootScope){
 
     // I'm using the same post type video, but you will need another custom post type for this one
-    $scope.yourAPI = 'http://www.recorramisiones.com.ar/rutadelaselva/api/?json=get_category_posts&slug=servicios-hospitales&count=5'; 
+    $scope.yourAPI = 'http://www.recorramisiones.com.ar/rutadelaselva/api/get_category_posts/?slug=servicios-hospitales'; 
     $scope.items = [];
     $scope.totalPages = 0;
     $scope.currentPage = 1;
@@ -702,7 +702,7 @@
   app.controller('areasController', [ '$http', '$scope', '$rootScope', function($http, $scope, $rootScope){
 
     // I'm using the same post type video, but you will need another custom post type for this one
-    $scope.yourAPI = 'http://www.recorramisiones.com.ar/rutadelaselva/api/?json=get_category_posts&slug=areas-naturales-protegidas&count=5'; 
+    $scope.yourAPI = 'http://www.recorramisiones.com.ar/rutadelaselva/api/get_category_posts/?slug=areas-naturales-protegidas'; 
     $scope.items = [];
     $scope.totalPages = 0;
     $scope.currentPage = 1;
