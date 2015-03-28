@@ -28,7 +28,7 @@ em, i { font-style: italic; }
 sup, sub { font-size: 0.7em; vertical-align: baseline; position: relative; top: -0.4em; }
 sub { top: 0.4em; }
 
-#wrap { padding: 20px 0; margin: 0 auto; }
+#wrap { padding: 5px 0; margin: 0 auto; }
 
 .arrow_box { padding: 30px; margin: 32px 0 30px 0; background: #b3d9f3; position: relative; border-radius: 6px; }
 .arrow_box:before, .arrow_box:after { width: 0; height: 0; border: solid transparent; position: absolute; content: " "; pointer-events: none; }

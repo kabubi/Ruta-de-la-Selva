@@ -280,3 +280,9 @@ span.ng-scope {
 	from { transform: rotate(0deg); }
 	to { transform: rotate(360deg); }
 }
+.fbwall {
+    height: 100%;
+}
+.app-page {
+    height: 100%;
+}
