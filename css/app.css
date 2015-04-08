@@ -96,14 +96,21 @@ ons-toolbar ~ .page__content {
 	box-shadow: none;
 }
 ons-list.menu-list.list.ons-list-inner {
-	background-image: url('../images/menuheader.jpg') !important;
+	/* background-image: url('../images/menuheader.jpg') !important;
     background-repeat: no-repeat !important;
     background-position: 0px 0px !important;
-    background-size: 100% auto !important;
+    background-size: 100% auto !important; */
     padding-top: 60%;
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
+}
+ons-toolbar.navigation-bar.navigation-bar--transparent {
+  background-image: url('../images/menuheader.jpg') !important;
+  height: 25%;
+  background-repeat: no-repeat !important;
+  background-position: 0px 0px !important;
+  background-size: 100% auto !important;
 }
 .menu-list {
 	background-color: transparent;
