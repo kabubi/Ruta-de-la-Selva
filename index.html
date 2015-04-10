@@ -35,5 +35,451 @@
     No se puede conectar a internet.<br> Verifique su conexion.<br>
   </ons-modal>
   
+  <!--  Pagina Alojamientos -->
+  <ons-template id="alojamientos.html">
+  <ons-page ng-controller="alojamientosController" data-ng-init="getAllRecords()">
+    <ons-toolbar>	
+      <div class="left">
+  	    <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon></ons-toolbar-button>
+      </div>
+  	  <div class="right">
+  		  <ons-toolbar-button ng-click="collapse()" ><ons-icon icon="ion-android-search"></ons-icon></ons-toolbar-button>
+      </div>
+      <div class="center">Alojamientos 
+		<div class="searchbar">        		
+			<input ng-show="collapsed" type="search" class="search-input" ng-model="search" placeholder="Buscar...">
+		</div>
+	  </div>
+    </ons-toolbar>    
+     <div class="app-page alojamientos-page">
+      <ons-list modifier="news">
+        <ons-list-item modifier="chevron" class="list-item-container" ng-repeat="item in items | filter:search" ng-click="showPost(item)">
+  	      <ons-row>
+  	        <div class="thumbnail-box is-loading" images-loaded="imgLoadedEvents">
+  	          <img ng-show="{{ item.thumbnail_images }}" ng-src="{{ item.thumbnail_images.full.url }}" class="thumbnail" img-cache>
+            </div>
+  		  </ons-row>
+          <ons-row>
+  		  	<div class="cabecera">
+  			  <div class="name">
+  				{{ item.title | limitTo: 25 }}
+  			  </div>
+  			  <div class="location" ng-show="{{ item.categories }}">
+  			  </div>
+  			</div>
+  	      </ons-row>			
+        </ons-list-item>		
+      </ons-list>
+      <ons-button id="moreButton" modifier="large" should-spin="{{isFetching}}" ng-click="nextPage()">Ver mas</ons-button>
+    </div>
+   </ons-page>
+  </ons-template>
+  
+  <!--  Pagina Atractivos -->
+  <ons-template id="atractivos.html">
+   <ons-page ng-controller="atractivosController" data-ng-init="getAllRecords()">
+    <ons-toolbar>	
+      <div class="left">
+  	    <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon></ons-toolbar-button>
+      </div>
+  	  <div class="right">
+  		  <ons-toolbar-button ng-click="collapse()" ><ons-icon icon="ion-android-search"></ons-icon></ons-toolbar-button>
+      </div>
+      <div class="center">Atractivos y Actividades 
+		<div class="searchbar">        		
+			<input ng-show="collapsed" type="search" class="search-input" ng-model="search" placeholder="Buscar...">
+		</div>
+	  </div>
+    </ons-toolbar>
+    <div class="searchbar">        
+      <input ng-show="collapsed" type="search" class="search-input" ng-model="search" placeholder="Buscar">
+    </div>
+    <div class="app-page atractivos-page">
+      <ons-list modifier="news">
+        <ons-list-item modifier="chevron" class="list-item-container" ng-repeat="item in items | filter:search" ng-click="showPost(item)">
+  	      <ons-row>
+  	        <div class="thumbnail-box is-loading" images-loaded="imgLoadedEvents">
+  	          <img ng-show="{{ item.thumbnail_images }}" ng-src="{{ item.thumbnail_images.full.url }}" class="thumbnail" img-cache>
+            </div>
+  		  </ons-row>
+          <ons-row>
+  		  	<div class="cabecera">
+  			  <div class="name">
+  				{{ item.title | limitTo: 25 }}
+  			  </div>
+  			  <div class="location" ng-show="{{ item.categories }}">
+  			  </div>
+  			</div>
+  	      </ons-row>			
+        </ons-list-item>		
+      </ons-list>
+      <ons-button id="moreButton" modifier="large" should-spin="{{isFetching}}" ng-click="nextPage()">Ver mas</ons-button>
+    </div>
+   </ons-page>
+  </ons-template>
+  
+  <!--  Pagina Informes -->
+  <ons-template id="informes.html">
+   <ons-page ng-controller="informesController" data-ng-init="getAllRecords()">
+    <ons-toolbar>
+      <div class="left">
+	    <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon></ons-toolbar-button>
+      </div>
+	  <div class="right">
+  		  <ons-toolbar-button ng-click="collapse()" ><ons-icon icon="ion-android-search"></ons-icon></ons-toolbar-button>
+      </div>
+      <div class="center">Informes Turisticos 
+		<div class="searchbar">        		
+			<input ng-show="collapsed" type="search" class="search-input" ng-model="search" placeholder="Buscar...">
+		</div>
+	  </div>
+    </ons-toolbar>
+    <div class="app-page informes-page" >
+      <ons-list modifier="news">
+        <ons-list-item modifier="chevron" class="list-item-container" ng-repeat="item in items | filter:search" ng-click="showPost(item)">
+		  <ons-row>
+			<div class="thumbnail-box is-loading" images-loaded="imgLoadedEvents">
+			  <img ng-show="{{ item.thumbnail_images }}" ng-src="{{ item.thumbnail_images.full.url }}" class="thumbnail" img-cache>
+            </div>
+		  </ons-row>
+          <ons-row>
+			<div class="cabecera">
+  			  <div class="name">
+  				{{ item.title | limitTo: 25 }}
+  			  </div>
+  			  <div class="location" ng-show="{{ item.categories }}">
+  			  </div>
+  			</div>
+		  </ons-row>			
+        </ons-list-item>
+      </ons-list>
+      <ons-button id="moreButton" modifier="large" should-spin="{{isFetching}}" ng-click="nextPage()">Ver mas</ons-button>
+    </div>
+   </ons-page>
+  </ons-template>
+  
+  <!--  Pagina Servicios -->
+  <ons-template id="servicios.html">
+   <ons-page ng-controller="serviciosController" data-ng-init="getAllRecords()">
+    <ons-toolbar>	
+      <div class="left">
+  	    <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon></ons-toolbar-button>
+      </div>
+  	  <div class="right">
+  		  <ons-toolbar-button ng-click="collapse()" ><ons-icon icon="ion-android-search"></ons-icon></ons-toolbar-button>
+      </div>
+      <div class="center">Servicios y Hospitales 
+		<div class="searchbar">        		
+			<input ng-show="collapsed" type="search" class="search-input" ng-model="search" placeholder="Buscar...">
+		</div>
+	  </div>
+    </ons-toolbar>    
+    <div class="app-page servicios-page">
+      <ons-list modifier="news">
+        <ons-list-item modifier="chevron" class="list-item-container" ng-repeat="item in items | filter:search" ng-click="showPost(item)">
+  	      <ons-row>
+  	        <div class="thumbnail-box is-loading" images-loaded="imgLoadedEvents">
+  	          <img ng-show="{{ item.thumbnail_images }}" ng-src="{{ item.thumbnail_images.full.url }}" class="thumbnail" img-cache>
+            </div>
+  		  </ons-row>
+          <ons-row>
+  		  	<div class="cabecera">
+  			  <div class="name">
+  				{{ item.title | limitTo: 25 }}
+  			  </div>
+  			  <div class="location" ng-show="{{ item.categories }}">
+  			  </div>
+  			</div>
+  	      </ons-row>			
+        </ons-list-item>		
+      </ons-list>
+      <ons-button id="moreButton" modifier="large" should-spin="{{isFetching}}" ng-click="nextPage()">Ver mas</ons-button>
+    </div>
+   </ons-page>
+  </ons-template>
+  
+  <!--  Pagina Areas -->
+  <ons-template id="areas.html">
+   <ons-page ng-controller="areasController" data-ng-init="getAllRecords()">
+    <ons-toolbar>	
+      <div class="left">
+  	    <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon></ons-toolbar-button>
+      </div>
+  	  <div class="right">
+  		  <ons-toolbar-button ng-click="collapse()" ><ons-icon icon="ion-android-search"></ons-icon></ons-toolbar-button>
+      </div>
+      <div class="center">Areas Naturales 
+		<div class="searchbar">        		
+			<input ng-show="collapsed" type="search" class="search-input" ng-model="search" placeholder="Buscar...">
+		</div>
+	  </div>
+    </ons-toolbar>
+    <div class="app-page areas-page">
+      <ons-list modifier="news">
+        <ons-list-item modifier="chevron" class="list-item-container" ng-repeat="item in items | filter:search" ng-click="showPost(item)">
+  	      <ons-row>
+  	        <div class="thumbnail-box is-loading" images-loaded="imgLoadedEvents">
+  	          <img ng-show="{{ item.thumbnail_images }}" ng-src="{{ item.thumbnail_images.full.url }}" class="thumbnail" img-cache>
+            </div>
+  		  </ons-row>
+          <ons-row>
+  		  	<div class="cabecera">
+  			  <div class="name">
+  				{{ item.title | limitTo: 45 }}
+  			  </div>
+  			  <div class="location" ng-show="{{ item.categories }}">
+  			  </div>
+  			</div>
+  	      </ons-row>			
+        </ons-list-item>		
+      </ons-list>
+      <ons-button id="moreButton" modifier="large" should-spin="{{isFetching}}" ng-click="nextPage()">Ver mas</ons-button>
+    </div>
+   </ons-page>
+  </ons-template>
+  
+  <!--  Pagina Mapa -->
+  <ons-template id="markers.html">
+  <ons-page>
+  <ons-toolbar>
+    <div class="left">
+      <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon></ons-toolbar-button>
+    </div>
+    <div class="center">Mapa</div>
+  </ons-toolbar>
+  <div ng-controller="markersController" class="map-fullscreen-container">
+    <map zoom="8" center="[-26.82, -54.84]" class="fullscreen">      
+      <info-window id="marker-info">
+        <div ng-non-bindable="">
+          <!-- <strong class="markerTitle">{{ infoWindow.title }}</strong> -->
+          <div class="markerContent">
+			<center>
+			  <img src="{{ marker.image }}"/>
+			</center>
+            <!-- <p>{{ infoWindow.content }}</p> -->
+          </div>
+        </div>
+      </info-window>	  
+	  <shape id="polyline" name="polyline" 
+      geodesic="true" stroke-color="#f4a604" stroke-opacity="1.0" stroke-weight="3"
+      path="[[-27.13, -54.90],[-27.05, -54.84],[-26.99, -54.62],[-25.91, -54.61]]" >
+	  </shape>
+      <marker ng-repeat="(id, marker) in markers" id="{{ id }}" 
+    	position="{{marker.location}}" 
+    	on-click="showMarker(event, $index)"
+    	icon="{url:'images/pins.png',
+        scaledSize:[35,35]}">
+	  </marker>
+    </map>
+  </div>
+  </ons-page>
+  </ons-template>
+  
+  <!--  Pagina Post -->
+  <ons-template id="post.html">
+  <ons-page ng-controller="postController">
+  <ons-toolbar>
+    <div class="left">
+      <ons-back-button>Atras</ons-back-button>
+    </div>
+	<div class="right">
+	  <ons-toolbar-button ng-click="openSocialSharing()" ><ons-icon icon="ion-android-share"></ons-icon></ons-toolbar-button>
+    </div>
+    <div class="center">{{ item.title | limitTo: 20 }}</div>
+  </ons-toolbar>    
+  <div class="app-page">
+    <div class="app-hero app-hero-image is-loading" images-loaded="imgLoadedEvents">
+	  <i class="ion-pricetags"></i> <span ng-repeat="cat in item.categories">{{cat.title}} </span>
+      <h2>{{ item.title | limitTo: 25 }}</h2>
+      <div class="app-hero-overlay"></div>
+      <img ng-src="{{ item.thumbnail_images.full.url }}" class="app-hero-bg" img-cache>
+    </div>
+    <div class="app-page-content">	  
+      <div ng-bind-html="renderHtml(item.content)"></div>
+    </div>
+  </div>
+  </ons-page>
+  </ons-template>
+  
+  <!--  Pagina Acerca -->
+  <ons-template id="acerca.html">
+  <ons-page>
+  <ons-toolbar>
+    <div class="left">
+  	    <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon></ons-toolbar-button>
+    </div>
+    <div class="center">Acerca de</div>
+  </ons-toolbar>
+  <div class="app-page">
+    <div class="app-hero app-hero-image">
+      <h2>Acerca de</h2>
+      <div class="app-hero-overlay"></div>
+      <img src="images/acerca.jpg" class="app-hero-bg">
+    </div>
+    <div class="app-page-content">
+      <p>La Ruta de la Selva se entiende como una Ruta Turística que abarca una región dentro del Territorio Misionero, con presencia de masa boscosa o Bosque Atlántico.</p>
+	  <p><ons-icon icon="fa-facebook-square" fixed-width="true"></ons-icon><a href="http://facebook.com">/RutadelaSelva</a></p>
+	  <p><ons-icon icon="fa-twitter-square" fixed-width="true"></ons-icon><a href="http://twitter.com">@RutadelaSelva</a></p>
+	  <p><ons-icon icon="fa-phone-square" fixed-width="true"></ons-icon><a href="tel:3764447719">376-4447719</a></p>
+	  <p><ons-icon icon="fa-envelope-square" fixed-width="true"></ons-icon><a href="mailto:subecoturismomisiones@gmail.com ">subecoturismomisiones</a></p>
+	  <p><ons-icon icon="fa-map-marker" fixed-width="true"></ons-icon><a href="https://www.google.com.ar/maps/place/Av+Bartolom%C3%A9+Mitre+1557,+Posadas,+Misiones/@-27.3750011,-55.8922895,17z/data=!4m7!1m4!3m3!1s0x9457be4b5b01452f:0x839f369629bb6d75!2sAv+Bartolom%C3%A9+Mitre+1557,+Posadas,+Misiones!3b1!3m1!1s0x9457be4b5b01452f:0x839f369629bb6d75">Av. Mitre 1557, piso 1º</a></p>    
+	</div>
+  </div>
+  </ons-page>
+  </ons-template>
+  
+  <!--  Pagina Menu -->
+  <ons-template id="menu.html">
+  <ons-page modifier="menu-page">
+  <ons-toolbar modifier="transparent"></ons-toolbar>
+  <ons-list class="menu-list">
+    <ons-list-item class="menu-item" ng-click="menu.setMainPage('home.html', {closeMenu: true}) ">
+      <ons-icon icon="fa-home" fixed-width="true"></ons-icon>
+      Inicio
+    </ons-list-item>
+	<ons-list-item class="menu-item" ng-click="gallery.pushPage('areas.html'); menu.closeMenu(); ">	
+      <ons-icon icon="fa-leaf" fixed-width="true"></ons-icon>
+       Areas Naturales
+    </ons-list-item>
+    <ons-list-item class="menu-item" ng-click="gallery.pushPage('informes.html'); menu.closeMenu(); ">
+      <ons-icon icon="fa-info-circle" fixed-width="true"></ons-icon>
+      Informes Turísticos
+    </ons-list-item>
+	<ons-list-item class="menu-item" ng-click="gallery.pushPage('atractivos.html'); menu.closeMenu(); ">
+      <ons-icon icon="fa-camera" fixed-width="true"></ons-icon>
+       Atractivos y Actividades
+    </ons-list-item>
+    <ons-list-item class="menu-item" ng-click="gallery.pushPage('alojamientos.html'); menu.closeMenu(); ">
+      <ons-icon icon="fa-building" fixed-width="true"></ons-icon>
+      Alojamientos
+    </ons-list-item>	
+	<ons-list-item class="menu-item" ng-click="gallery.pushPage('servicios.html'); menu.closeMenu(); ">
+      <ons-icon icon="fa-plus-square" fixed-width="true"></ons-icon>
+       Hospitales y Servicios
+    </ons-list-item>
+    <ons-list-item class="menu-item" ng-click="gallery.pushPage('markers.html'); menu.closeMenu(); ">
+      <ons-icon icon="fa-map-marker" fixed-width="true"></ons-icon>
+      Mapa
+    </ons-list-item>
+	<ons-list-item class="menu-item" ng-click="gallery.pushPage('acerca.html'); menu.closeMenu(); ">
+      <ons-icon icon="fa-question-circle" fixed-width="true"></ons-icon>
+      Acerca de
+    </ons-list-item>
+  </ons-list>
+  </ons-page>
+  </ons-template>
+  
+  <!--  Pagina Home -->
+  <ons-template id="home.html">
+  <ons-navigator animation="slide" var="gallery"> 
+	  <ons-page>
+		<ons-toolbar modifier="opacity">
+		  <div class="left">
+			<ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon></ons-toolbar-button>
+		  </div>
+		  <div class="center">Ruta de la Selva</div>
+		</ons-toolbar>
+		<div class="app-page">
+		  <div class="app-page-menu">
+			<ons-row>
+			  <ons-col>				
+				<ons-button modifier="clean" ng-click="gallery.pushPage('alojamientos.html');" >
+				  <div class="thumbnail-box is-loading" images-loaded="imgLoadedEvents">
+					<img src="images/alojamientos.jpg" img-cache>
+				  </div>
+				  <p>Alojamientos</p>
+				</ons-button>
+			  </ons-col>
+			</ons-row>
+			<ons-row>
+			  <ons-col>
+				<ons-button modifier="clean" ng-click="gallery.pushPage('informes.html');">
+				  <div class="thumbnail-box is-loading" images-loaded="imgLoadedEvents">
+					<img src="images/informes.jpg" img-cache>
+				  </div>
+				  <p>Informes Turísticos</p>
+				</ons-button>
+			  </ons-col>
+			</ons-row>
+			<ons-row>
+			  <ons-col>
+				<ons-button modifier="clean" ng-click="gallery.pushPage('atractivos.html');">
+				  <div class="thumbnail-box is-loading" images-loaded="imgLoadedEvents">
+					<img src="images/actividades.jpg" img-cache>
+				  </div>
+				  <p>Atractivos y Actividades</p>
+				</ons-button>
+			  </ons-col>
+			</ons-row>
+			<ons-row>
+			  <ons-col>
+				<ons-button modifier="clean" ng-click="gallery.pushPage('areas.html');">
+				  <div class="thumbnail-box is-loading" images-loaded="imgLoadedEvents">
+					<img src="images/areas.jpg" img-cache>
+				  </div>
+				  <p>Áreas Naturales</p>
+				</ons-button>
+			  </ons-col>
+			</ons-row>
+			<ons-row>
+			  <ons-col>
+				<ons-button modifier="clean" ng-click="gallery.pushPage('servicios.html');">
+				  <div class="thumbnail-box is-loading" images-loaded="imgLoadedEvents">
+					<img src="images/hospitales.jpg" img-cache>
+				  </div>
+				  <p>Hospitales y Servicios</p>
+				</ons-button>
+			  </ons-col>
+			</ons-row>
+			<ons-row>
+			  <ons-col>
+				<ons-button modifier="clean" ng-click="gallery.pushPage('markers.html');">
+				  <div class="thumbnail-box is-loading" images-loaded="imgLoadedEvents">
+					<img src="images/map.jpg" img-cache>
+				  </div>
+				  <p>Mapa</p>
+				</ons-button>
+			  </ons-col>
+			</ons-row>
+		  </div>
+		</div>
+	  </ons-page>
+  </ons-navigator> 
+  </ons-template>
+  
+  <!--  Pagina Opciones -->
+  <ons-template id="opciones.html">
+  <ons-page>
+  <ons-toolbar>
+    <div class="left">
+  	    <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon></ons-toolbar-button>
+    </div>
+    <div class="center">Opciones</div>
+  </ons-toolbar>
+  <div class="app-page">
+    <div class="app-page-content">
+	  <ons-button modifier="large" ng-click="limpiarCache()">Limpiar Cache</ons-button>
+	</div>
+  </div>
+  </ons-page>
+  </ons-template>
+  
+  <!--  Pagina Facebook -->
+  <ons-template id="facebook.html">
+  <ons-page>
+  <ons-toolbar>
+    <div class="left">
+  	    <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon></ons-toolbar-button>
+    </div>
+    <div class="center">Facebook</div>
+  </ons-toolbar>
+  <div class="app-page">  
+	<div class="fbwall">
+		<iframe style="top: 3%;; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" src="wall.html" frameborder="0" allowfullscreen></iframe>
+    </div>	
+  </div>
+  </ons-page>
+  </ons-template>
+  
 </body>
 </html>
