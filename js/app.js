@@ -83,7 +83,7 @@
 	// http://www.recorramisiones.com.ar/rutadelaselva/api/get_category_posts/?slug=informes-turisticos
 	// http://www.recorramisiones.com.ar/rutadelaselva/api/?json=get_category_posts&slug=informes-turisticos&count=5&status=publish
 	
-    $scope.yourAPI = 'http://www.recorramisiones.com.ar/rutadelaselva/api/get_category_posts/?slug=informes-turisticos'; 
+    $scope.yourAPI = 'informes.json'; 
     $scope.items = [];
     $scope.totalPages = 0;
     $scope.currentPage = 1;
