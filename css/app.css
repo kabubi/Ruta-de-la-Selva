@@ -203,6 +203,7 @@ ons-button.ng-isolate-scope.button.effeckt-button.button--large.slide-left {
 }
 ons-button#moreButton {
   background-color: transparent;
+  height: 30px;
 }
 span.ng-scope {
   color: #f4a332;

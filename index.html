@@ -70,6 +70,7 @@
   	      </ons-row>			
         </ons-list-item>		
       </ons-list>
+	 <ons-button id="moreButton" modifier="large" should-spin="{{isFetching}}" ng-click="nextPage()"></ons-button>
     </div>
    </ons-page>
   </ons-template>
@@ -112,6 +113,7 @@
   	      </ons-row>			
         </ons-list-item>		
       </ons-list>
+	 <ons-button id="moreButton" modifier="large" should-spin="{{isFetching}}" ng-click="nextPage()"></ons-button>
     </div>
    </ons-page>
   </ons-template>
@@ -151,6 +153,7 @@
 		  </ons-row>			
         </ons-list-item>
       </ons-list>
+	 <ons-button id="moreButton" modifier="large" should-spin="{{isFetching}}" ng-click="nextPage()"></ons-button>
     </div>
    </ons-page>
   </ons-template>
@@ -190,6 +193,7 @@
   	      </ons-row>			
         </ons-list-item>		
       </ons-list>
+	 <ons-button id="moreButton" modifier="large" should-spin="{{isFetching}}" ng-click="nextPage()"></ons-button>
     </div>
    </ons-page>
   </ons-template>
@@ -229,6 +233,7 @@
   	      </ons-row>			
         </ons-list-item>		
       </ons-list>
+	 <ons-button id="moreButton" modifier="large" should-spin="{{isFetching}}" ng-click="nextPage()"></ons-button>
     </div>
    </ons-page>
   </ons-template>
@@ -255,16 +260,19 @@
           </div>
         </div>
       </info-window>	  
-	  <shape id="polyline" name="polyline" 
+	  
+	  <!--<shape id="polyline" name="polyline" 
       geodesic="true" stroke-color="#f4a604" stroke-opacity="1.0" stroke-weight="3"
       path="[[-27.13, -54.90],[-27.05, -54.84],[-26.99, -54.62],[-25.91, -54.61]]" >
-	  </shape>
+	  </shape>-->
+	  
       <marker ng-repeat="(id, marker) in markers" id="{{ id }}" 
     	position="{{marker.location}}" 
     	on-click="showMarker(event, $index)"
     	icon="{url:'images/pins.png',
         scaledSize:[35,35]}">
 	  </marker>
+	  
     </map>
   </div>
   </ons-page>
