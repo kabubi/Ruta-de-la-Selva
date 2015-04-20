@@ -254,9 +254,9 @@
           <!-- <strong class="markerTitle">{{ infoWindow.title }}</strong> -->
           <div class="markerContent">
 			<center>
-			  <img src="{{ marker.image }}"/>
+			  <!--<img src="{{ marker.image }}"/> -->
 			</center>
-            <!-- <p>{{ infoWindow.content }}</p> -->
+            <p>{{ infoWindow.content }}</p> 
           </div>
         </div>
       </info-window>	  
@@ -293,7 +293,7 @@
   <div class="app-page">
     <div class="app-hero app-hero-image is-loading" images-loaded="imgLoadedEvents">
 	  <i class="ion-pricetags"></i> <span ng-repeat="cat in item.categories">{{cat.title}} </span>
-      <h2>{{ item.title | limitTo: 25 }}</h2>
+      <h2>{{ item.title | limitTo: 15 }}...</h2>
       <div class="app-hero-overlay"></div>
       <img ng-src="{{ item.thumbnail_images.full.url }}" class="app-hero-bg" img-cache>
     </div>

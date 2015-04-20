@@ -237,7 +237,7 @@
   app.controller('atractivosController', [ '$http', '$scope', '$rootScope', function($http, $scope, $rootScope){
 
     // I'm using the same post type video, but you will need another custom post type for this one	
-    $scope.yourAPI = 'http://www.recorramisiones.com.ar/rutadelaselva/api/get_category_posts/?id=3'; 
+    $scope.yourAPI = 'http://www.rutadelaselva.com.ar/api/get_category_posts/?id=3'; 
     $scope.items = [];
     $scope.totalPages = 0;
     $scope.currentPage = 1;
@@ -548,7 +548,7 @@
   app.controller('serviciosController', [ '$http', '$scope', '$rootScope', function($http, $scope, $rootScope){
 
     // I'm using the same post type video, but you will need another custom post type for this one
-    $scope.yourAPI = 'http://www.recorramisiones.com.ar/rutadelaselva/api/get_category_posts/?id=8'; 
+    $scope.yourAPI = 'http://www.rutadelaselva.com.ar/api/get_category_posts/?id=8'; 
     $scope.items = [];
     $scope.totalPages = 0;
     $scope.currentPage = 1;
@@ -701,8 +701,9 @@
   // Controlador Areas Naturales
   app.controller('areasController', [ '$http', '$scope', '$rootScope', function($http, $scope, $rootScope){
 
-    // I'm using the same post type video, but you will need another custom post type for this one
-    $scope.yourAPI = 'http://recorramisiones.com.ar/rutadelaselva/api/get_category_posts/?id=2'; 
+    // http://recorramisiones.com.ar/rutadelaselva/api/get_category_posts/?id=2
+	// I'm using the same post type video, but you will need another custom post type for this one
+    $scope.yourAPI = 'areas.json'; 
     $scope.items = [];
     $scope.totalPages = 0;
     $scope.currentPage = 1;
@@ -739,7 +740,7 @@
 
     $scope.pullContent = function(){
       
-      $http.jsonp($scope.yourAPI+'&page='+$scope.pageNumber+'&callback=JSON_CALLBACK').success(function(response) {
+      $http.jsonp($scope.yourAPI).success(function(response) {
 
         if($scope.pageNumber > response.pages){
 
@@ -874,12 +875,14 @@
   
   // Map Markers Controller
 	app.controller('markersController', function($scope, $compile){
-		
+				
 		$scope.infoWindow = {
-			title: 'title',
-			image: 'image',
+            title: 'title',
+			image: 'images/placeholder.png',
 			content: 'content'
 		};
+
+ 
 
 		$scope.markers = [
 			{
@@ -960,6 +963,8 @@
 			};
 			$scope.$apply();
 			$scope.showInfoWindow(event, 'marker-info', this.getPosition());
+			
+			
 		}
 
 	}); 
