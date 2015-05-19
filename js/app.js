@@ -237,7 +237,7 @@
   app.controller('atractivosController', [ '$http', '$scope', '$rootScope', function($http, $scope, $rootScope){
 
     // I'm using the same post type video, but you will need another custom post type for this one	
-    $scope.yourAPI = 'http://www.rutadelaselva.com.ar/api/get_category_posts/?id=3'; 
+    $scope.yourAPI = 'atractivos.json'; 
     $scope.items = [];
     $scope.totalPages = 0;
     $scope.currentPage = 1;
@@ -274,7 +274,7 @@
 
     $scope.pullContent = function(){
       
-      $http.jsonp($scope.yourAPI+'&page='+$scope.pageNumber+'&callback=JSON_CALLBACK').success(function(response) {
+      $http.get($scope.yourAPI).success(function(response) {
 
         if($scope.pageNumber > response.pages){
 
@@ -739,8 +739,9 @@
 
 
     $scope.pullContent = function(){
-      
-      $http.jsonp($scope.yourAPI).success(function(response) {
+	
+	  // $http.jsonp($scope.yourAPI+'&page='+$scope.pageNumber+'&callback=JSON_CALLBACK').success(function(response) {
+      $http.get($scope.yourAPI).success(function(response) {
 
         if($scope.pageNumber > response.pages){
 
